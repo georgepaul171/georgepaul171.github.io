@@ -3,321 +3,206 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Portfolio of George Paul, specialising in Bayesian machine learning, risk modelling and probability." />
-    <meta name="author" content="George Paul" />
-    <meta name="keywords" content="George Paul, Data Scientist, Analyst, Bayesian Machine Learning, Quantile Regression, Gaussian Processes, Python, MSc Bath" />
+    <meta name="description" content="George Paul - statistician and machine learning researcher working on Bayesian methodology, uncertainty quantification and the evaluation of modern AI systems." />
+    <meta name="author" content="" />
+    <meta name="keywords" content="George Paul, Bayesian statistics, machine learning research, shrinkage priors, uncertainty quantification, LLM evaluation, PhD" />
     <meta name="robots" content="index, follow" />
-    <title>George Paul – Data Scientist</title>
-
+    <title>George Paul - Statistics &amp; Machine Learning Research</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Core theme CSS (Bootstrap + layout) -->
     <link href="css/styles.css" rel="stylesheet" />
-
     <style>
-        :root {
-            /* Neutral, conservative palette */
-            --color-bg: #f5f5f5;
-            --color-surface: #ffffff;
-            --color-surface-alt: #f0f0f0;
-            --color-text: #111827;
-            --color-text-muted: #6b7280;
-            --color-accent: #946c2a;           /* warm neutral accent */
-            --color-accent-dark: #7a5620;
-            --color-border: rgba(15, 23, 42, 0.12);
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
-            --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
-        }
-
         html {
             scroll-behavior: smooth;
         }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Helvetica, Arial, sans-serif !important;
-            background: var(--color-bg);
-            color: var(--color-text);
+    
+        body, h1, h2, h3, h4, h5, h6, p, a {
+            font-family: Helvetica, Arial, sans-serif !important;
         }
-
-        h1, h2, h3, h4, h5, h6,
+    
         .navbar-nav .nav-link,
-        .subheading {
+        .subheading,
+        .resume-section-content h2,
+        h1, h2, h3, h4, h5, h6 {
             text-transform: none !important;
         }
-
-        /* Keep original fixed-sidebar layout but restyle */
-        .navbar {
-            background-color: #202020 !important;
-            box-shadow: var(--shadow-md);
-        }
-
-        .navbar-brand span,
-        .navbar-nav .nav-link {
-            font-size: 0.95rem;
-            letter-spacing: 0.03em;
-        }
-
-        .navbar-nav .nav-link.active {
-            color: var(--color-accent) !important;
-        }
-
-        /* Hero section at top (inside main, above sidebar content) */
-        .hero-section {
-            padding: 7rem 1.5rem 4rem 1.5rem;
-            background: linear-gradient(
-                135deg,
-                #f3f3f3 0%,
-                #ffffff 40%,
-                #f5f1ea 100%
-            );
-            text-align: center;
-        }
-
-        .hero-inner {
-            max-width: 840px;
-            margin: 0 auto;
-        }
-
-        .hero-section h1 {
-            margin-bottom: 0.75rem;
-            font-size: clamp(2.6rem, 4vw, 3.4rem);
-            letter-spacing: -0.03em;
-        }
-
-        .hero-tagline {
-            font-size: 1.05rem;
-            color: var(--color-text-muted);
-            max-width: 42rem;
-            margin: 0 auto 1.5rem auto;
-        }
-
-        .hero-highlight {
-            font-weight: 600;
-        }
-
-        .hero-keywords {
-            font-size: 0.95rem;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .hero-cta {
-            margin-bottom: 1.75rem;
-        }
-
+    
         .social-icons {
             margin-bottom: 1.5rem;
         }
-
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.4rem;
-            height: 2.4rem;
-            border-radius: 999px;
-            border: 1px solid var(--color-border);
-            background: var(--color-surface);
-            color: #374151;
-            box-shadow: var(--shadow-sm);
-            transition: transform 0.18s ease, box-shadow 0.18s ease,
-                        background 0.18s ease, color 0.18s ease;
-        }
-
-        .social-icon + .social-icon {
-            margin-left: 0.5rem;
-        }
-
+    
         .social-icon:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-            background: var(--color-accent);
-            color: #ffffff;
+            transform: scale(1.1);
+            transition: transform 0.2s;
+            color: #3f51b5;
         }
-
-        .btn-primary,
-        .cv-btn {
-            background-color: #333333;
-            color: #ffffff;
+    
+        form input, form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+        }
+    
+        form .btn {
+            background-color: #3f51b5;
+            color: white;
+            padding: 0.6rem 1.2rem;
             border: none;
-            border-radius: 999px;
-            padding: 0.6rem 1.4rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
             font-weight: 600;
-            font-size: 0.95rem;
-            margin: 0.25rem 0.35rem;
-            box-shadow: var(--shadow-sm);
-            transition: background 0.18s ease, transform 0.18s ease,
-                        box-shadow 0.18s ease;
+            box-shadow: 0 2px 8px rgba(63,81,181,0.08);
         }
-
-        .btn-outline-primary {
-            border-radius: 999px;
-            border: 1px solid #333333;
-            color: #333333;
-            background: transparent;
-            padding: 0.6rem 1.4rem;
+    
+        form .btn:hover, .btn-primary:hover {
+            background-color: #303f9f;
+        }
+    
+        #form-message {
+            margin-top: 1rem;
+            display: none;
+            color: green;
+            font-weight: 500;
+        }
+        .hero-section {
+            padding: 7rem 0 5rem 0;
+            background: var(--hero-bg, #f5f7fa);
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .hero-section img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 2.5rem;
+            border: 4px solid #3f51b5;
+        }
+        .hero-section h1 {
+            margin-bottom: 3rem;
+            font-size: 4rem;
+        }
+        .hero-section .lead {
+            margin-bottom: 3rem;
+            font-size: 1.5rem;
+        }
+        .hero-section .cv-btn {
+            margin-bottom: 3rem;
+        }
+        .hero-section .social-icons {
+            margin-bottom: 0;
+        }
+        .btn-primary, .cv-btn {
+            background-color: #3f51b5;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            padding: 0.6rem 1.2rem;
             font-weight: 600;
-            font-size: 0.95rem;
-            margin: 0.25rem 0.35rem;
-            box-shadow: none;
-            transition: background 0.18s ease, color 0.18s ease,
-                        transform 0.18s ease;
+            margin: 0.5rem 0.25rem;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(63,81,181,0.08);
         }
-
-        .btn-primary:hover,
-        .cv-btn:hover {
-            background-color: #111111;
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
+        .btn-primary:hover, .cv-btn:hover {
+            background-color: #303f9f;
         }
-
-        .btn-outline-primary:hover {
-            background: #333333;
-            color: #ffffff;
-            transform: translateY(-1px);
-        }
-
         .fade-in {
             opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
         }
-
         .fade-in.visible {
             opacity: 1;
             transform: none;
         }
-
-        .resume-section {
-            padding: 4rem 1.5rem;
-            background: var(--color-surface);
+        .dark-mode {
+            background: #181a1b !important;
+            color: #e0e0e0 !important;
         }
-
-        .resume-section:nth-of-type(even) {
-            background: var(--color-surface-alt);
+        .dark-mode .hero-section {
+            background: #23272b !important;
         }
-
-        .resume-section-content {
-            max-width: 960px;
-            margin: 0 auto;
+        .dark-mode .resume-section-content, .dark-mode .navbar, .dark-mode .container-fluid {
+            background: #181a1b !important;
+            color: #e0e0e0 !important;
         }
-
-        .resume-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
+        .dark-mode .btn-primary, .dark-mode .cv-btn {
+            background-color: #222b45 !important;
+            color: #fff !important;
         }
-
-        .subheading {
-            font-size: 0.98rem;
-            color: var(--color-text-muted);
+        .dark-mode .btn-primary:hover, .dark-mode .cv-btn:hover {
+            background-color: #3f51b5 !important;
         }
-
-        .text-primary {
-            color: var(--color-accent-dark) !important;
+        .dark-toggle {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 9999;
+            background: #fff;
+            color: #3f51b5;
+            border: 1px solid #3f51b5;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3rem;
+            box-shadow: 0 2px 8px rgba(63,81,181,0.08);
         }
-
-        hr.m-0 {
-            border-color: rgba(148, 163, 184, 0.2);
+        .dark-mode .dark-toggle {
+            background: #23272b;
+            color: #fff;
+            border: 1px solid #fff;
         }
-
         .badge-skill {
             display: inline-block;
-            background: #e2e2e2;
-            color: #374151;
-            border-radius: 999px;
-            padding: 0.25em 0.9em;
-            margin: 0.15em 0.25em 0.15em 0;
-            font-size: 0.85em;
+            background: #e3e6f3;
+            color: #3f51b5;
+            border-radius: 0.5rem;
+            padding: 0.3em 0.8em;
+            margin: 0.2em 0.2em 0.2em 0;
+            font-size: 0.95em;
             font-weight: 500;
         }
-
-        /* Contact form */
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            font-size: 0.98rem;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-sm);
-            background: #ffffff;
+        .dark-mode .badge-skill {
+            background: #23272b;
+            color: #b3c0ff;
         }
-
-        form input:focus,
-        form textarea:focus {
-            outline: none;
-            border-color: #333333;
-            box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.2);
-        }
-
-        #form-message {
-            margin-top: 1rem;
-            display: none;
-            color: #166534;
-            font-weight: 500;
-        }
-
         .spinner {
             display: none;
-            width: 22px;
-            height: 22px;
-            border: 3px solid #333333;
-            border-top: 3px solid #ffffff;
+            width: 24px;
+            height: 24px;
+            border: 3px solid #3f51b5;
+            border-top: 3px solid #fff;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 0.75rem auto 0;
+            margin: 0 auto;
         }
-
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        @media (max-width: 991.98px) {
-            .hero-section {
-                padding-top: 6rem;
-            }
-        }
     </style>
 </head>
 <body id="page-top">
-
-    <!-- Hero (kept as a standalone section above main resume content) -->
+    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">🌙</button>
     <section class="hero-section fade-in">
-        <div class="hero-inner">
-            <h1>George Paul</h1>
-            <p class="hero-tagline">
-                <span class="hero-highlight">Data Science Analyst</span> specialising in Bayesian machine learning, tail‑risk modelling and probability.
-            </p>
-            <p class="hero-keywords">
-                Bayesian machine learning · Gaussian processes · Quantile‑based risk
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn-primary">View projects</a>
-            </div>
-            <div class="social-icons">
-                <a class="social-icon" href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="social-icon" href="mailto:gpaul2002@gmail.com" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a class="social-icon" href="https://github.com/georgepaul171" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+        <h1>George Paul</h1>
+        <p class="lead">Bayesian statistics &amp; machine learning research | MSc Data Science (Distinction), University of Bath</p>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="assets/George_Paul_CV.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
         </div>
     </section>
-
-    <!-- Navigation (same structure/order as original StartBootstrap resume) -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background-color: #3f51b5;">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">George Paul</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/headshot.jpg" alt="George Paul" />
-            </span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/headshot.jpg" alt="George Paul" /></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
@@ -325,8 +210,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
@@ -335,89 +221,100 @@
         </div>
     </nav>
 
-    <!-- Page Content (sections in the same order you had) -->
+    <!-- Page Content -->
     <div class="container-fluid p-0">
-
         <!-- About -->
         <section class="resume-section fade-in" id="about">
             <div class="resume-section-content">
-                <div class="subheading mb-3">
-                    London, United Kingdom · (+44) 7841 402737 ·
-                    <a href="mailto:gpaul2002@gmail.com" style="color: inherit; text-decoration: underline;">gpaul2002@gmail.com</a>
+                <div class="subheading mb-4">
+                    London, United Kingdom · (+44) 7841 402737 · 
+                    <a href="mailto:georgepaul.data@gmail.com" style="color: #3f51b5;">georgepaul.data@gmail.com</a>
                 </div>
-                <p class="lead mb-3">
-                    I am an Analyst in the Advisory team at Buro Happold and a Data Science graduate from the University of Bath, with a Mathematics BSc from the University of Manchester.
-                </p>
-                <p class="mb-3">
-                    My work focuses on Bayesian machine learning, probabilistic modelling, and building practical systems for risk and probabilistic modelling. I enjoy taking messy, real‑world data and turning it into interpretable models that support traceable, quantifiable, uncertainty‑aware decision‑making, including supply chain cost estimation through to financial tail‑risk forecasting.
-                </p>
-                <p class="mb-0">
-                    I am particularly interested in Bayesian nonparametrics, Gaussian processes and quantile‑based risk measures, and in connecting these methods to real economic value and operational decision‑making. I am also interested in the application of machine learning to complex systems, and the use of Bayesian methods to improve the robustness and reliability of machine learning models.
+                <p class="lead mb-5">
+                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry where I moved into fine-tuning and rigorously evaluating vision-language and language models — work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am currently a Data Science Analyst at Buro Happold, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
                 </p>
             </div>
         </section>
         <hr class="m-0" />
-
+        <!-- Publications -->
+        <section class="resume-section fade-in" id="publications">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Publications</h2>
+                <div class="mb-4">
+                    <p class="mb-1"><strong>Paul, G.</strong> and Tipping, M. E. (2026). The Adaptive Elastic Horseshoe Prior: Data-Driven Regularisation for Mixed Sparse&ndash;Dense Feature Structures via Momentum-Based Empirical Bayes.</p>
+                    <div class="subheading">Manuscript prepared for submission, <em>Electronic Journal of Statistics</em></div>
+                </div>
+                <div class="mb-4">
+                    <p class="mb-1">[Co-authors incl. <strong>Paul, G.</strong>] (2026). Benchmarking Deep Learning Approaches for AEC Engineering Drawing Layout Detection and Information Extraction.</p>
+                    <div class="subheading"><em>Proceedings of the European Conference on Computing in Construction (EC3)</em>, Corfu, Greece, 2026 &middot; peer-reviewed</div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
         <!-- Experience -->
+
         <section class="resume-section fade-in" id="experience">
             <div class="resume-section-content">
                 <h2 class="mb-5">Experience</h2>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Analyst – Advisory</h3>
-                        <div class="subheading mb-2">Buro Happold</div>
+                        <h3 class="mb-0">Data Science Analyst</h3>
+                        <div class="subheading mb-3">Buro Happold</div>
                         <ul>
-                            <li>Building data pipelines and developing machine learning models suited to the needs of the business.</li>
-                            <li>Working on a state-of-the-art smart city, contributing to digital‑twin workstreams.</li>
-                            <li>Guiding responsible use of AI tools in Advisory and shaping applied AI use‑cases.</li>
+                            <li><strong>LLM/VLM fine-tuning &amp; evaluation:</strong> fine-tuned vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) to extract structured information from 1,500+ technical documents, owning the labelling framework and controlled evaluation protocol. This work contributed to a peer-reviewed EC3 2026 paper.</li>
+                            <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures.</li>
+                            <li><strong>Validation infrastructure:</strong> developed end-to-end model-validation pipelines in Python on Azure, with explicit checks for robustness to distribution shift.</li>
+                            <li>AI Super User, guiding the use of AI tools across the business, and contributor to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">September 2025 – Present</span></div>
                 </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Data Scientist Intern</h3>
-                        <div class="subheading mb-2">GreenPlace</div>
+                        <h3 class="mb-0">Data Science Intern</h3>
+                        <div class="subheading mb-3">GreenPlace</div>
                         <ul>
-                            <li>Developed hierarchical Bayesian models for building‑level emissions and Energy‑Use Intensity with uncertainty quantification.</li>
-                            <li>Designed the GreenPlace Index (GPI) to quantify building energy performance, used for internal monitoring.</li>
-                            <li>Built geospatial carbon‑risk models and engineered features from 150k+ observations to improve prediction accuracy.</li>
-                            <li>Explored system‑dynamics and agent‑based simulations for carbon feedback loops in commercial real estate.</li>
+                            <li>Contributed to emissions estimation using Bayesian techniques and data traceability pipelines.</li>
+                            <li>Developed the GreenPlace Index (GPI) to quantify building energy performance, now used in internal monitoring.</li>
+                            <li>Built predictive models with geospatial data to assess carbon risk in offices.</li>
+                            <li>Engineered features from a 150k+ row dataset to improve Energy Use Intensity model accuracy.</li>
+                            <li>Created simulations comparing system dynamics and agent-based models of carbon feedback loops.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">June 2024 – July 2025</span></div>
                 </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Physics and Sustainability Intern</h3>
-                        <div class="subheading mb-2">Buro Happold</div>
+                        <div class="subheading mb-3">Buro Happold</div>
                         <ul>
-                            <li>Conducted thermal simulations and energy‑use analysis for buildings, supporting sustainability‑focused design decisions.</li>
+                            <li>Conducted thermal simulations on buildings to model energy usage.</li>
+                            <li>Gained experience in physical modelling and sustainability-focused engineering processes.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">June 2019</span></div>
                 </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Mathematics Tutor</h3>
-                        <div class="subheading mb-2">Self‑employed</div>
+                        <div class="subheading mb-3">Self Employed</div>
                         <ul>
-                            <li>Taught mathematics and statistics to GCSE and A‑Level students, with many students achieving A/A* outcomes.</li>
+                            <li>Taught mathematics and statistics to GCSE and A-Level students.</li>
+                            <li>Helped students consistently reach A/A* grades through concept simplification and structured guidance.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">July 2018 – June 2024</span></div>
                 </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Warehouse Assistant</h3>
-                        <div class="subheading mb-2">Pong Cheese Ltd</div>
+                        <div class="subheading mb-3">Pong Cheese Ltd</div>
                         <ul>
-                            <li>Supported operations during university breaks, processing 1,000+ daily orders and coordinating warehouse workflows.</li>
+                            <li>Managed warehouse operations during university breaks, processing 1000+ daily orders.</li>
+                            <li>Took on a leadership role coordinating other employees and maintaining smooth workflows.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">July 2018 – December 2023</span></div>
@@ -426,107 +323,71 @@
         </section>
         <hr class="m-0" />
 
-        <!-- Projects -->
-        <section class="resume-section fade-in" id="projects">
+        <!-- Research -->
+        <section class="resume-section fade-in" id="research">
             <div class="resume-section-content">
-                <h2 class="mb-5">Projects</h2>
+                <h2 class="mb-5">Research</h2>
 
-                <!-- Research proposal (no PhD wording) -->
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-1">Bayesian Nonparametric Quantile Function Modelling for Tail Risk</h3>
-                        <div class="subheading mb-2">Research proposal – functional Gaussian process quantile regression</div>
-                
-                        <p class="mb-2">
-                            This research proposal develops a Bayesian nonparametric model for the entire conditional quantile function of returns, treated as a smooth surface q(&alpha;, x) over quantile level &alpha; and predictors x. Rather than fitting separate quantile models independently, the idea is to model the full quantile surface jointly so that tail-risk forecasts remain coherent across multiple confidence levels.
-                        </p>
-                
-                
+                        <h3 class="mb-0">The Adaptive Elastic Horseshoe Prior</h3>
+                        <div class="subheading mb-2">First-author paper with Prof. Michael Tipping &middot; University of Bath</div>
+                        <p><strong>The problem.</strong> Shrinkage priors in Bayesian regression fix their regularisation geometry in advance: the horseshoe handles sparse signals well but struggles when predictors are correlated, while elastic-net approaches fix the balance between sparsity and grouping by hand. Neither adapts to data that contains both structures at once.</p>
+                        <p><strong>The approach.</strong> I developed a prior that learns that balance from the data itself, updating its mixing and strength parameters during inference via momentum-driven empirical Bayes. I showed these updates correspond to approximate M-steps of an EM algorithm on a variational lower bound, and established minimax-optimal posterior contraction in the sparse normal-means setting. Eight simulation studies map out precisely when the method helps and when it does not, alongside a real-data application.</p>
+                        <p><strong>Where it goes next.</strong> The main open problem is extending the contraction theory to correlated designs — precisely the setting that motivates the method. I am also interested in heteroscedastic likelihood specifications to address the calibration limitations the experiments surfaced.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2026</span></div>
-                </div>    
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Adaptive Elastic Horseshoe Prior for Building Energy Modelling</h3>
-                        <div class="subheading mb-2">MSc dissertation · Distinction (81%)</div>
-                        <p class="mb-0">
-                            My MSc research developed an Adaptive Elastic Horseshoe (AEH) prior for Bayesian
-                            building energy modelling, designed for heterogeneous data with both sparse and
-                            correlated predictors. The model estimates Energy Use Intensity using
-                            <em>y = Xw + ε</em>, with <em>ε ~ N(0, α<sup>-1</sup>I)</em>, while the AEH prior places
-                            <em>w<sub>j</sub> ~ N(0, λ<sub>j</sub><sup>2</sup>τ<sup>2</sup>)</em> and adaptively balances
-                            sparsity and grouping through the penalty
-                            <em>α|w<sub>j</sub>| + (1 - α)w<sub>j</sub><sup>2</sup></em>. Unlike standard horseshoe or fixed
-                            elastic-net regularisation, AEH updates its shrinkage behaviour during inference using
-                            feature-importance and uncertainty feedback. The framework achieved
-                            <em>R<sup>2</sup> = 0.939</em>, with strong predictive performance while preserving
-                            interpretability and calibrated uncertainty.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025 – Present</span></div>
                 </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Intelligent Carbon Risk Management</h3>
-                        <div class="subheading mb-2">Bayesian framework for embedded‑carbon traceability</div>
-                        <p class="mb-2">
-                            Designed a traceable Bayesian framework for embedded emissions in supply chains, producing confidence‑weighted emissions scores and high‑risk‑supplier flags. The prototype integrates structured and semi‑structured data, scenario‑based validation and audit‑style simulations aligned with regulations such as CA&nbsp;SB&nbsp;253.
-                        </p>
-                        <a href="https://github.com/georgepaul171/bayesian-proposal" target="_blank" class="btn btn-outline-primary">Repository</a>
+                        <h3 class="mb-0">Benchmarking Deep Learning for Engineering Drawing Layout Detection</h3>
+                        <div class="subheading mb-2">Peer-reviewed, EC3 2026 &middot; contribution: vision-language model methodology &amp; evaluation</div>
+                        <p><strong>The problem.</strong> Document layout models are overwhelmingly trained and validated on text-centric documents. Whether they transfer to engineering drawings — sparse, line-based, extreme aspect ratios — had never been systematically tested.</p>
+                        <p><strong>The approach.</strong> Working with domain experts, the team curated a purpose-built annotated dataset and benchmarked five architectures under matched conditions. I delivered the vision-language arm, fine-tuning a multimodal model with parameter-efficient adaptation, and designed the held-out evaluation protocol used across the comparison.</p>
+                        <p><strong>What we found.</strong> The multimodal model transferred poorly, and an ablation showed that architectures and weights pretrained on general-document layouts actively underperformed models without that prior — a domain-interference effect. The negative result is the interesting one: representations learned on one distribution can harm transfer to a structurally different one, which bears directly on what evaluation in one setting can tell us about behaviour in another.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025–2026</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Hierarchical Bayesian Models for Building Energy Use</h3>
+                        <div class="subheading mb-2">MSc research project &middot; 81%</div>
+                        <p>An investigation of hierarchical Bayesian models for energy-use-intensity prediction, focused on how uncertainty quantification supports transparent carbon assessment where point estimates fall short. I explored the integration of domain-informed priors with flexible likelihoods, and used posterior predictive checks to interrogate model robustness and reflect real-world building heterogeneity.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Reinforcement Learning with PPO</h3>
-                        <div class="subheading mb-2">MSc – OpenAI Gym Boxing‑v5</div>
-                        <p class="mb-0">
-                            Implemented and tuned a PPO agent in the Boxing‑v5 environment, with a custom CNN feature extractor and orthogonal initialisation. Explored how reward shaping and policy‑update dynamics influence long‑run behaviour, motivating applications of RL in real‑world control problems.
-                        </p>
-                        <a href="https://github.com/mrgw21/rl-multiagent-boxing" target="_blank" class="btn btn-outline-primary mt-2">Repository</a>
+                        <div class="subheading mb-2">Academic coursework &middot; collaborative project</div>
+                        <p>Trained a PPO agent in the Boxing-v5 environment, designing a custom CNN feature extractor with orthogonal weight initialisation and investigating how reward shaping affects long-term strategy. A useful counterweight to my Bayesian work in thinking about sequential decision-making under uncertainty.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
                 </div>
-
             </div>
         </section>
         <hr class="m-0" />
 
         <!-- Education -->
-        <section class="resume-section fade-in" id="education">
+        <section class="resume-section" id="education">
             <div class="resume-section-content">
                 <h2 class="mb-5">Education</h2>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">University of Bath</h3>
-                        <div class="subheading mb-2">MSc Data Science</div>
-                        <p class="mb-2">
-                            Distinction (overall 80.7%). Core modules covered advanced machine learning, Bayesian statistics, optimisation, statistical modelling and large-scale data analysis.
-                        </p>
-                        <p class="mb-2">
-                            My MSc research focused on hierarchical Bayesian modelling for building energy use, with particular emphasis on uncertainty quantification, interpretability and practical application to sustainability and carbon assessment.
-                        </p>
-                        <p class="mb-0">
-                            Alongside the research, I worked on applied projects involving data cleaning, model development, evaluation and communication of results to technical and non-technical audiences.
-                        </p>
+                        <div class="subheading mb-3">Master of Science, Data Science</div>
+                        <p>Distinction &mdash; overall 80.7%<br/><span class="subheading" style="font-size:0.9em;">Statistics 94% &middot; Machine Learning 91% &middot; Bayesian Machine Learning 88% &middot; Research 81%</span></p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">September 2024 – August 2025</span></div>
                 </div>
-
                 <div class="d-flex flex-column flex-md-row justify-content-between">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">University of Manchester</h3>
-                        <div class="subheading mb-2">BSc Mathematics</div>
-                        <p class="mb-2">
-                            Upper Second Class Honours (2:1). The degree provided a rigorous grounding in analysis, linear algebra, probability and statistics, which underpins my later work in machine learning and quantitative risk. Key modules included stochastic processes, statistical inference, optimisation, numerical analysis and differential equations.
-                        </p>
-                        <p class="mb-0">
-                            I particularly enjoyed courses in probability and stochastic processes, which built the intuition for modelling uncertainty and time‑series behaviour that I now rely on in Bayesian econometrics and financial risk modelling.
-                        </p>
+                        <div class="subheading mb-3">Bachelor of Science, Mathematics</div>
+                        <p>Upper Second Class Honours (2:1)</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">September 2021 – June 2024</span></div>
                 </div>
@@ -538,97 +399,64 @@
         <section class="resume-section fade-in" id="skills">
             <div class="resume-section-content">
                 <h2 class="mb-5">Skills</h2>
-
-                <div class="subheading mb-2">Machine learning & probabilistic modelling</div>
-                <div class="mb-3">
+                <div class="subheading mb-3">Statistical Machine Learning</div>
+                <div>
                     <span class="badge-skill">Bayesian inference</span>
+                    <span class="badge-skill">Hamiltonian Monte Carlo</span>
+                    <span class="badge-skill">Variational inference</span>
+                    <span class="badge-skill">Empirical Bayes</span>
+                    <span class="badge-skill">Shrinkage priors</span>
                     <span class="badge-skill">Gaussian processes</span>
-                    <span class="badge-skill">Quantile regression</span>
-                    <span class="badge-skill">PyMC</span>
-                    <span class="badge-skill">NumPyro</span>
-                    <span class="badge-skill">Bambi</span>
-                    <span class="badge-skill">Neural networks</span>
-                    <span class="badge-skill">PyTorch</span>
-                    <span class="badge-skill">TensorFlow</span>
-                    <span class="badge-skill">Bayesian neural nets</span>
-                    <span class="badge-skill">Gaussian Process Regression</span>
                     <span class="badge-skill">Hierarchical models</span>
-                    <span class="badge-skill">Posterior predictive checks</span>
+                    <span class="badge-skill">Uncertainty quantification</span>
+                    <span class="badge-skill">LLM/VLM fine-tuning (LoRA)</span>
+                    <span class="badge-skill">Representation learning</span>
+                    <span class="badge-skill">Experimental design</span>
                 </div>
-
-                <div class="subheading mb-2">Data engineering & workflow automation</div>
-                <div class="mb-3">
-                    <span class="badge-skill">Python</span>
-                    <span class="badge-skill">pandas</span>
-                    <span class="badge-skill">NumPy</span>
-                    <span class="badge-skill">SQL / SQLite</span>
-                    <span class="badge-skill">Git</span>
-                    <span class="badge-skill">Docker</span>
-                    <span class="badge-skill">FastAPI</span>
-                    <span class="badge-skill">Streamlit</span>
-                    <span class="badge-skill">Data cleaning</span>
-                    <span class="badge-skill">Workflow automation</span>
-                </div>
-
-                <div class="subheading mb-2">Statistical analysis & evaluation</div>
-                <div class="mb-3">
-                    <span class="badge-skill">Hypothesis testing</span>
-                    <span class="badge-skill">Time‑series analysis</span>
-                    <span class="badge-skill">Prior sensitivity</span>
-                    <span class="badge-skill">Model diagnostics</span>
-                    <span class="badge-skill">Cross‑validation</span>
-                    <span class="badge-skill">SHAP explainability</span>
-                </div>
-
-                <div class="subheading mb-2">Programming & tools</div>
+                <div class="subheading mb-3 mt-3">Programming Languages & Tools</div>
                 <div>
                     <span class="badge-skill">Python</span>
-                    <span class="badge-skill">SQL</span>
+                    <span class="badge-skill">PyTorch</span>
                     <span class="badge-skill">JAX</span>
-                    <span class="badge-skill">Jupyter</span>
+                    <span class="badge-skill">NumPy</span>
+                    <span class="badge-skill">SciPy</span>
+                    <span class="badge-skill">scikit-learn</span>
+                    <span class="badge-skill">statsmodels</span>
+                    <span class="badge-skill">Hugging Face</span>
+                    <span class="badge-skill">SQL</span>
+                    <span class="badge-skill">MATLAB</span>
+                    <span class="badge-skill">Git/GitHub</span>
+                    <span class="badge-skill">Azure ML</span>
                     <span class="badge-skill">LaTeX</span>
-                    <span class="badge-skill">Linux / CLI</span>
-                    <span class="badge-skill">Azure / cloud tooling</span>
                 </div>
             </div>
         </section>
         <hr class="m-0" />
-
         <!-- Interests -->
-        <section class="resume-section fade-in" id="interests">
+        <section class="resume-section" id="interests">
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
-                <p>
-                    Outside of data science, I’m passionate about health and fitness – I run regularly, go to the gym, and follow football, having played competitively in several countries.
-                </p>
-                <p>
-                    I enjoy travelling to places with strong natural landscapes and cultural diversity, which has shaped how I think about global sustainability challenges and data‑driven solutions.
-                </p>
-                <p class="mb-0">
-                    I’m also a long‑time Formula&nbsp;1 fan, interested in how data, engineering and strategy interact under uncertainty – the same themes that motivate my work on risk and decision‑making.
-                </p>
+                <p>I have played football competitively for most of my life, including in China, across Europe and in Africa. Team sport is the thing outside work that has taught me most about collaboration — showing up consistently, adapting to the people around you, and understanding that a group performs better than the sum of its individuals. I look for that same dynamic in research environments.</p>
+                <p>I also taught mathematics and statistics to GCSE and A-Level students for six years alongside my studies, which sharpened how I explain technical ideas to people approaching them for the first time — a skill that has carried directly into research writing and cross-disciplinary work with domain experts.</p>
+                <p class="mb-0">Beyond that: running and the gym, travel, and a lifelong interest in Formula 1 for the intersection of engineering, performance and strategic decision-making under uncertainty.</p>
             </div>
         </section>
         <hr class="m-0" />
-
         <!-- Contact -->
         <section class="resume-section fade-in" id="contact">
             <div class="resume-section-content">
-                <h2 class="mb-4">Contact</h2>
-                <p class="mb-3">
-                    Feel free to get in touch.
-                </p>
+                <h2 class="mb-5">Contact Me</h2>
                 <form action="https://formspree.io/f/mnndpeoz" method="POST">
                     <div class="mb-3">
-                        <input type="email" name="email" placeholder="Your email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
                     <div class="mb-3">
-                        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+                        <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send</button>
                     <div class="spinner" id="formSpinner"></div>
                 </form>
-                <p id="form-message">Message sent – thank you.</p>
+                <p id="form-message" style="margin-top: 1rem; display: none; color: green;">Message sent! Thanks.</p>
             </div>
         </section>
     </div>
@@ -653,44 +481,54 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('DOMContentLoaded', revealOnScroll);
 
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            applyTheme(storedTheme);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            applyTheme('dark');
-        }
-
-
-        // Contact form with spinner
-        const form = document.querySelector("#contact form");
-        const message = document.getElementById("form-message");
-        const spinner = document.getElementById("formSpinner");
-
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-            spinner.style.display = 'block';
-            const formData = new FormData(form);
-            try {
-                const response = await fetch("https://formspree.io/f/mnndpeoz", {
-                    method: "POST",
-                    headers: { 'Accept': 'application/json' },
-                    body: formData
-                });
-                spinner.style.display = 'none';
-                if (response.ok) {
-                    form.reset();
-                    message.style.display = "block";
-                    setTimeout(() => {
-                        message.style.display = "none";
-                    }, 5000);
-                } else {
-                    alert("There was an error. Please try again.");
-                }
-            } catch (err) {
-                spinner.style.display = 'none';
-                alert("Submission failed. Please check your connection and try again.");
+        // Dark mode toggle
+        const darkToggle = document.getElementById('darkToggle');
+        darkToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                darkToggle.innerText = '☀️';
+            } else {
+                localStorage.setItem('theme', 'light');
+                darkToggle.innerText = '🌙';
             }
         });
-    </script>
+        // Persist dark mode
+        if(localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            darkToggle.innerText = '☀️';
+        }
+
+        // Contact form with spinner
+        const form = document.querySelector("form");
+        const message = document.getElementById("form-message");
+        const spinner = document.getElementById("formSpinner");
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault(); // Prevent page reload
+          spinner.style.display = 'block';
+          const formData = new FormData(form);
+          try {
+            const response = await fetch("https://formspree.io/f/mnndpeoz", {
+              method: "POST",
+              headers: { 'Accept': 'application/json' },
+              body: formData
+            });
+            spinner.style.display = 'none';
+            if (response.ok) {
+              form.reset();
+              message.style.display = "block";
+              setTimeout(() => {
+                message.style.display = "none";
+              }, 5000);
+            } else {
+              alert("There was an error. Please try again.");
+            }
+          } catch (err) {
+            spinner.style.display = 'none';
+            alert("Submission failed. Please check your connection and try again.");
+          }
+        });
+      </script>
+    
 </body>
 </html>
