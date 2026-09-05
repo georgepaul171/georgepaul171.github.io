@@ -364,34 +364,26 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">The Adaptive Elastic Horseshoe Prior</h3>
-                        <div class="subheading mb-2"><strong>Paul, G.</strong> and Tipping, M. E. (2026) &middot; under review &middot; manuscript prepared for <em>Electronic Journal of Statistics</em></div>
-                        <p><strong>The problem.</strong> In Bayesian regression, many shrinkage priors commit to a fixed regularisation geometry upfront. Some favour sparsity; others favour grouping correlated predictors. Real datasets often contain both structures at once, and methods that cannot adapt tend to miss one or the other.</p>
-                        <p><strong>The approach.</strong> Working closely with Prof. Michael Tipping, I developed a prior that learns this balance from the data during inference, rather than fixing it by hand. The work sits in the broader literature on adaptive regularisation and empirical Bayes: after surveying how existing horseshoe and elastic-net style priors behave under mixed sparse&ndash;dense regimes, we proposed a construction that updates its own mixing parameters as evidence accumulates, backed by simulation studies and a real-data application that map when the adaptation helps and when it does not.</p>
-                        <p><strong>Where it goes next.</strong> A natural next step is extending the theoretical guarantees to correlated designs — the setting that most motivates the method — and exploring richer likelihoods so that uncertainty estimates remain well calibrated when noise is not constant across observations.</p>
+                        <div class="subheading mb-2">University of Bath &middot; First author, with Prof. Michael Tipping. Manuscript prepared for submission to the <em>Electronic Journal of Statistics</em>.</div>
+                        <p><strong>The problem.</strong> Shrinkage priors fix their regularisation geometry in advance, so none adapts when sparse and correlated structure appear in the same data. Building energy data, where I first met the problem, is exactly that: a few strong drivers alongside many weak, collinear ones.</p>
+                        <p><strong>The approach.</strong> A prior that learns the sparsity/grouping balance from the data during inference. I showed the adaptive updates are approximate M-steps of an EM algorithm on a variational lower bound, so the procedure is principled rather than heuristic, and established minimax-optimal posterior contraction in the sparse normal-means setting, matching the horseshoe rate.</p>
+                        <p><strong>Evaluation.</strong> Applied within an ARD framework to energy-use-intensity prediction with full uncertainty decomposition, then generalised post-degree across eight simulation studies and a standard benchmark dataset. Convergence failures and calibration limits reported rather than omitted.</p>
+                        <p><strong>Where it goes next.</strong> Extending the contraction theory to correlated designs — the setting that motivates the method — and improving predictive calibration in dense high-dimensional designs.</p>
+                        <p>Began as my MSc dissertation (81%); developed further independently alongside full-time employment.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025 – Present</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">Feb 2025 – Present</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Benchmarking Deep Learning for Engineering Drawing Layout Detection</h3>
+                        <h3 class="mb-0"><a href="https://ec-3.org/publication/ec32026_305/" target="_blank" rel="noopener noreferrer">Benchmarking Deep Learning for Engineering Drawing Layout Detection</a></h3>
                         <div class="subheading mb-2">[Co-authors incl. <strong>Paul, G.</strong>] (2026) &middot; peer-reviewed, <em>Proceedings of EC3</em>, Corfu &middot; collaborative industry&ndash;research project</div>
+                        <p class="mb-2">DOI: <a href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">10.35490/EC3.2026.305</a></p>
                         <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings — sparse, line-based, and structurally unlike office paperwork — had not been systematically tested, despite clear practical need in the built-environment sector.</p>
-                        <p><strong>The approach.</strong> This was a team effort throughout. Together with domain experts and co-authors, we curated a purpose-built annotated dataset and compared several architectures under matched conditions. My contribution focused on the vision-language arm and the shared evaluation protocol: I worked closely with engineers to define what &ldquo;correct extraction&rdquo; meant in practice, then fine-tuned a multimodal model and helped the group run a fair held-out comparison across methods.</p>
-                        <p><strong>Where it goes next.</strong> The main finding was a negative one that matters for the field: priors learned on general-document layouts can actively hurt transfer to drawings. A useful future direction is evaluation protocols that treat domain mismatch as a first-class concern — asking not only how well a model scores on a held-out set, but what that score tells us about behaviour under a structurally different deployment distribution.</p>
+                        <p><strong>The approach.</strong> This was a team effort throughout. Together with domain experts and co-authors, we curated a purpose-built annotated dataset and compared several architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and helped the group run a fair held-out comparison across methods.</p>
+                        <p><strong>Findings.</strong> The vision-language model achieved the highest F1 of the five (0.911), with strong semantic classification, but weaker localisation precision than the specialised detectors and a latency that rules it out for real-time use. Separately, an ablation showed models pre-trained on general documents performed worse than equivalent models without that pre-training: prior knowledge from one kind of data can hurt rather than help on a structurally different kind.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Hierarchical Bayesian Models for Building Energy Use</h3>
-                        <div class="subheading mb-2">MSc research project &middot; 81% &middot; precursor to the Adaptive Elastic Horseshoe Prior work</div>
-                        <p><strong>The problem.</strong> Point estimates of building energy use can look precise while hiding how uncertain the prediction really is — a poor fit for carbon assessment, where decisions need transparent uncertainty.</p>
-                        <p><strong>The approach.</strong> I investigated hierarchical Bayesian models that pool information across buildings while retaining building-level variation, combining domain-informed priors with flexible likelihoods and using posterior predictive checks to stress-test robustness.</p>
-                        <p><strong>Where it goes next.</strong> The project surfaced how much prior choice and likelihood misspecification matter in practice, which directly motivated the adaptive-regularisation questions I later pursued with Prof. Tipping.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between">
