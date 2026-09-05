@@ -350,7 +350,7 @@
                     <a href="mailto:georgepaul.data@gmail.com">georgepaul.data@gmail.com</a>
                 </div>
                 <p class="lead mb-5">
-                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors — developed in close collaboration with my supervisor — through an applied research role in industry where I worked with engineers and domain experts to fine-tune and rigorously evaluate vision-language and language models. That collaborative work became a peer-reviewed EC3 2026 paper, and gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am currently a Data Science Analyst at Buro Happold, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
+                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry fine-tuning and rigorously evaluating vision-language and language models — work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am currently a Data Science Analyst at Buro Happold, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
                 </p>
             </div>
         </section>
@@ -377,10 +377,10 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0"><a href="https://ec-3.org/publication/ec32026_305/" target="_blank" rel="noopener noreferrer">Benchmarking Deep Learning for Engineering Drawing Layout Detection</a></h3>
-                        <div class="subheading mb-2">[Co-authors incl. <strong>Paul, G.</strong>] (2026) &middot; peer-reviewed, <em>Proceedings of EC3</em>, Corfu &middot; collaborative industry&ndash;research project</div>
+                        <div class="subheading mb-2">[Co-authors incl. <strong>Paul, G.</strong>] (2026) &middot; peer-reviewed, <em>Proceedings of EC3</em>, Corfu</div>
                         <p class="mb-2">DOI: <a href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">10.35490/EC3.2026.305</a></p>
                         <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings — sparse, line-based, and structurally unlike office paperwork — had not been systematically tested, despite clear practical need in the built-environment sector.</p>
-                        <p><strong>The approach.</strong> This was a team effort throughout. Together with domain experts and co-authors, we curated a purpose-built annotated dataset and compared several architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and helped the group run a fair held-out comparison across methods.</p>
+                        <p><strong>The approach.</strong> We curated a purpose-built annotated dataset and compared several architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and designed the held-out evaluation protocol used across the comparison.</p>
                         <p><strong>Findings.</strong> The vision-language model achieved the highest F1 of the five (0.911), with strong semantic classification, but weaker localisation precision than the specialised detectors and a latency that rules it out for real-time use. Separately, an ablation showed models pre-trained on general documents performed worse than equivalent models without that pre-training: prior knowledge from one kind of data can hurt rather than help on a structurally different kind.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
@@ -389,9 +389,9 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Reinforcement Learning with PPO</h3>
-                        <div class="subheading mb-2">Academic coursework &middot; collaborative team project</div>
+                        <div class="subheading mb-2">Academic coursework &middot; team project</div>
                         <p><strong>The problem.</strong> Teaching an agent effective long-horizon behaviour from sparse rewards is hard: small design choices in representation and reward shape strategy in ways that are easy to get wrong.</p>
-                        <p><strong>The approach.</strong> As a team, we trained a PPO agent in a boxing environment, sharing responsibility for architecture, training runs, and analysis. I focused on the feature extractor and on how reward shaping changed long-term play — a useful counterweight to my Bayesian work in thinking about sequential decisions under uncertainty.</p>
+                        <p><strong>The approach.</strong> We trained a PPO agent in a boxing environment. I focused on the feature extractor and on how reward shaping changed long-term play — a useful counterweight to my Bayesian work in thinking about sequential decisions under uncertainty.</p>
                         <p><strong>Where it goes next.</strong> The project reinforced how much evaluation and ablation matter when comparing algorithmic choices, a theme that carries into my applied evaluation work.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
@@ -409,10 +409,10 @@
                         <h3 class="mb-0">Data Science Analyst</h3>
                         <div class="subheading mb-3">Buro Happold</div>
                         <ul>
-                            <li><strong>Collaborative LLM/VLM research:</strong> worked with engineers and co-authors to fine-tune vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) for structured extraction from 1,500+ technical documents — jointly owning the labelling framework and evaluation protocol that fed into our peer-reviewed EC3 2026 paper.</li>
-                            <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures, in close discussion with stakeholders who use the rankings.</li>
+                            <li><strong>LLM/VLM fine-tuning &amp; evaluation:</strong> fine-tuned vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) for structured extraction from 1,500+ technical documents, owning the labelling framework and evaluation protocol that fed into our peer-reviewed EC3 2026 paper.</li>
+                            <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures.</li>
                             <li><strong>Validation infrastructure:</strong> developed end-to-end model-validation pipelines in Python on Azure, with explicit checks for robustness to distribution shift.</li>
-                            <li>AI Super User, mentoring colleagues on AI tooling across the business, and contributor to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
+                            <li>AI Super User for AI tooling across the business, and contributor to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">September 2025 – Present</span></div>
@@ -422,7 +422,7 @@
                         <h3 class="mb-0">Data Science Intern</h3>
                         <div class="subheading mb-3">GreenPlace</div>
                         <ul>
-                            <li>Collaborated with the product team on emissions estimation using Bayesian techniques and data traceability pipelines.</li>
+                            <li>Contributed to emissions estimation using Bayesian techniques and data traceability pipelines.</li>
                             <li>Developed the GreenPlace Index (GPI) to quantify building energy performance, now used in internal monitoring.</li>
                             <li>Built predictive models with geospatial data to assess carbon risk in offices.</li>
                             <li>Engineered features from a 150k+ row dataset to improve Energy Use Intensity model accuracy.</li>
@@ -437,8 +437,8 @@
                         <h3 class="mb-0">Physics and Sustainability Intern</h3>
                         <div class="subheading mb-3">Buro Happold</div>
                         <ul>
-                            <li>Conducted thermal simulations on buildings to model energy usage, working alongside engineers on sustainability-focused modelling.</li>
-                            <li>Gained experience in physical modelling and cross-disciplinary engineering processes.</li>
+                            <li>Conducted thermal simulations on buildings to model energy usage.</li>
+                            <li>Gained experience in physical modelling and sustainability-focused engineering processes.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">June 2019</span></div>
@@ -515,14 +515,6 @@
                     <span class="badge-skill">Azure ML</span>
                     <span class="badge-skill">LaTeX</span>
                 </div>
-                <div class="subheading mb-3 mt-3">Collaboration &amp; Communication</div>
-                <div>
-                    <span class="badge-skill">Cross-disciplinary teamwork (engineers &amp; domain experts)</span>
-                    <span class="badge-skill">Co-authored research &amp; peer review</span>
-                    <span class="badge-skill">Mentoring &amp; technical teaching</span>
-                    <span class="badge-skill">Stakeholder-facing evaluation design</span>
-                    <span class="badge-skill">Team sport (competitive football)</span>
-                </div>
             </div>
         </section>
         <hr class="m-0" />
@@ -530,8 +522,8 @@
         <section class="resume-section" id="interests">
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
-                <p>I have played football competitively for most of my life, including in China, across Europe and in Africa. Team sport is the thing outside work that has taught me most about collaboration — showing up consistently, adapting to the people around you, and understanding that a group performs better than the sum of its individuals. That is the dynamic I look for in a research cohort: people who push each other&rsquo;s ideas rather than working in isolation.</p>
-                <p>I also taught mathematics and statistics to GCSE and A-Level students for six years alongside my studies, which sharpened how I explain technical ideas to people approaching them for the first time — a skill that has carried directly into research writing and cross-disciplinary work with domain experts on projects like the EC3 benchmarking paper.</p>
+                <p>I have played football competitively for most of my life, including in China, across Europe and in Africa. Outside work it is still the main thing that gets me out of my own head.</p>
+                <p>I also taught mathematics and statistics to GCSE and A-Level students for six years alongside my studies, which sharpened how I explain technical ideas to people approaching them for the first time.</p>
                 <p class="mb-0">Beyond that: running and the gym, travel, and a lifelong interest in Formula 1 for the intersection of engineering, performance and strategic decision-making under uncertainty.</p>
             </div>
         </section>
