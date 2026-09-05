@@ -210,9 +210,8 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Publications &amp; Research</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
@@ -231,28 +230,65 @@
                     <a href="mailto:georgepaul.data@gmail.com" style="color: #3f51b5;">georgepaul.data@gmail.com</a>
                 </div>
                 <p class="lead mb-5">
-                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry where I moved into fine-tuning and rigorously evaluating vision-language and language models — work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am currently a Data Science Analyst at Buro Happold, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
+                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors — developed in close collaboration with my supervisor — through an applied research role in industry where I worked with engineers and domain experts to fine-tune and rigorously evaluate vision-language and language models. That collaborative work became a peer-reviewed EC3 2026 paper, and gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am currently a Data Science Analyst at Buro Happold, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
                 </p>
             </div>
         </section>
         <hr class="m-0" />
-        <!-- Publications -->
-        <section class="resume-section fade-in" id="publications">
+
+        <!-- Publications & Research Experience -->
+        <section class="resume-section fade-in" id="research">
             <div class="resume-section-content">
-                <h2 class="mb-5">Publications</h2>
-                <div class="mb-4">
-                    <p class="mb-1"><strong>Paul, G.</strong> and Tipping, M. E. (2026). The Adaptive Elastic Horseshoe Prior: Data-Driven Regularisation for Mixed Sparse&ndash;Dense Feature Structures via Momentum-Based Empirical Bayes.</p>
-                    <div class="subheading">Manuscript prepared for submission, <em>Electronic Journal of Statistics</em></div>
+                <h2 class="mb-5">Publications and Research Experience</h2>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">The Adaptive Elastic Horseshoe Prior</h3>
+                        <div class="subheading mb-2"><strong>Paul, G.</strong> and Tipping, M. E. (2026) &middot; under review &middot; manuscript prepared for <em>Electronic Journal of Statistics</em></div>
+                        <p><strong>The problem.</strong> In Bayesian regression, many shrinkage priors commit to a fixed regularisation geometry upfront. Some favour sparsity; others favour grouping correlated predictors. Real datasets often contain both structures at once, and methods that cannot adapt tend to miss one or the other.</p>
+                        <p><strong>The approach.</strong> Working closely with Prof. Michael Tipping, I developed a prior that learns this balance from the data during inference, rather than fixing it by hand. The work sits in the broader literature on adaptive regularisation and empirical Bayes: after surveying how existing horseshoe and elastic-net style priors behave under mixed sparse&ndash;dense regimes, we proposed a construction that updates its own mixing parameters as evidence accumulates, backed by simulation studies and a real-data application that map when the adaptation helps and when it does not.</p>
+                        <p><strong>Where it goes next.</strong> A natural next step is extending the theoretical guarantees to correlated designs — the setting that most motivates the method — and exploring richer likelihoods so that uncertainty estimates remain well calibrated when noise is not constant across observations.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025 – Present</span></div>
                 </div>
-                <div class="mb-4">
-                    <p class="mb-1">[Co-authors incl. <strong>Paul, G.</strong>] (2026). Benchmarking Deep Learning Approaches for AEC Engineering Drawing Layout Detection and Information Extraction.</p>
-                    <div class="subheading"><em>Proceedings of the European Conference on Computing in Construction (EC3)</em>, Corfu, Greece, 2026 &middot; peer-reviewed</div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Benchmarking Deep Learning for Engineering Drawing Layout Detection</h3>
+                        <div class="subheading mb-2">[Co-authors incl. <strong>Paul, G.</strong>] (2026) &middot; peer-reviewed, <em>Proceedings of EC3</em>, Corfu &middot; collaborative industry&ndash;research project</div>
+                        <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings — sparse, line-based, and structurally unlike office paperwork — had not been systematically tested, despite clear practical need in the built-environment sector.</p>
+                        <p><strong>The approach.</strong> This was a team effort throughout. Together with domain experts and co-authors, we curated a purpose-built annotated dataset and compared several architectures under matched conditions. My contribution focused on the vision-language arm and the shared evaluation protocol: I worked closely with engineers to define what &ldquo;correct extraction&rdquo; meant in practice, then fine-tuned a multimodal model and helped the group run a fair held-out comparison across methods.</p>
+                        <p><strong>Where it goes next.</strong> The main finding was a negative one that matters for the field: priors learned on general-document layouts can actively hurt transfer to drawings. A useful future direction is evaluation protocols that treat domain mismatch as a first-class concern — asking not only how well a model scores on a held-out set, but what that score tells us about behaviour under a structurally different deployment distribution.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Hierarchical Bayesian Models for Building Energy Use</h3>
+                        <div class="subheading mb-2">MSc research project &middot; 81% &middot; precursor to the Adaptive Elastic Horseshoe Prior work</div>
+                        <p><strong>The problem.</strong> Point estimates of building energy use can look precise while hiding how uncertain the prediction really is — a poor fit for carbon assessment, where decisions need transparent uncertainty.</p>
+                        <p><strong>The approach.</strong> I investigated hierarchical Bayesian models that pool information across buildings while retaining building-level variation, combining domain-informed priors with flexible likelihoods and using posterior predictive checks to stress-test robustness.</p>
+                        <p><strong>Where it goes next.</strong> The project surfaced how much prior choice and likelihood misspecification matter in practice, which directly motivated the adaptive-regularisation questions I later pursued with Prof. Tipping.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Reinforcement Learning with PPO</h3>
+                        <div class="subheading mb-2">Academic coursework &middot; collaborative team project</div>
+                        <p><strong>The problem.</strong> Teaching an agent effective long-horizon behaviour from sparse rewards is hard: small design choices in representation and reward shape strategy in ways that are easy to get wrong.</p>
+                        <p><strong>The approach.</strong> As a team, we trained a PPO agent in a boxing environment, sharing responsibility for architecture, training runs, and analysis. I focused on the feature extractor and on how reward shaping changed long-term play — a useful counterweight to my Bayesian work in thinking about sequential decisions under uncertainty.</p>
+                        <p><strong>Where it goes next.</strong> The project reinforced how much evaluation and ablation matter when comparing algorithmic choices, a theme that carries into my applied evaluation work.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
                 </div>
             </div>
         </section>
         <hr class="m-0" />
-        <!-- Experience -->
 
+        <!-- Experience -->
         <section class="resume-section fade-in" id="experience">
             <div class="resume-section-content">
                 <h2 class="mb-5">Experience</h2>
@@ -261,10 +297,10 @@
                         <h3 class="mb-0">Data Science Analyst</h3>
                         <div class="subheading mb-3">Buro Happold</div>
                         <ul>
-                            <li><strong>LLM/VLM fine-tuning &amp; evaluation:</strong> fine-tuned vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) to extract structured information from 1,500+ technical documents, owning the labelling framework and controlled evaluation protocol. This work contributed to a peer-reviewed EC3 2026 paper.</li>
-                            <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures.</li>
+                            <li><strong>Collaborative LLM/VLM research:</strong> worked with engineers and co-authors to fine-tune vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) for structured extraction from 1,500+ technical documents — jointly owning the labelling framework and evaluation protocol that fed into our peer-reviewed EC3 2026 paper.</li>
+                            <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures, in close discussion with stakeholders who use the rankings.</li>
                             <li><strong>Validation infrastructure:</strong> developed end-to-end model-validation pipelines in Python on Azure, with explicit checks for robustness to distribution shift.</li>
-                            <li>AI Super User, guiding the use of AI tools across the business, and contributor to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
+                            <li>AI Super User, mentoring colleagues on AI tooling across the business, and contributor to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">September 2025 – Present</span></div>
@@ -274,7 +310,7 @@
                         <h3 class="mb-0">Data Science Intern</h3>
                         <div class="subheading mb-3">GreenPlace</div>
                         <ul>
-                            <li>Contributed to emissions estimation using Bayesian techniques and data traceability pipelines.</li>
+                            <li>Collaborated with the product team on emissions estimation using Bayesian techniques and data traceability pipelines.</li>
                             <li>Developed the GreenPlace Index (GPI) to quantify building energy performance, now used in internal monitoring.</li>
                             <li>Built predictive models with geospatial data to assess carbon risk in offices.</li>
                             <li>Engineered features from a 150k+ row dataset to improve Energy Use Intensity model accuracy.</li>
@@ -289,8 +325,8 @@
                         <h3 class="mb-0">Physics and Sustainability Intern</h3>
                         <div class="subheading mb-3">Buro Happold</div>
                         <ul>
-                            <li>Conducted thermal simulations on buildings to model energy usage.</li>
-                            <li>Gained experience in physical modelling and sustainability-focused engineering processes.</li>
+                            <li>Conducted thermal simulations on buildings to model energy usage, working alongside engineers on sustainability-focused modelling.</li>
+                            <li>Gained experience in physical modelling and cross-disciplinary engineering processes.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">June 2019</span></div>
@@ -301,7 +337,7 @@
                         <h3 class="mb-0">Mathematics Tutor</h3>
                         <div class="subheading mb-3">Self Employed</div>
                         <ul>
-                            <li>Taught mathematics and statistics to GCSE and A-Level students.</li>
+                            <li>Taught mathematics and statistics to GCSE and A-Level students for six years, adapting explanations to each learner.</li>
                             <li>Helped students consistently reach A/A* grades through concept simplification and structured guidance.</li>
                         </ul>
                     </div>
@@ -314,58 +350,10 @@
                         <div class="subheading mb-3">Pong Cheese Ltd</div>
                         <ul>
                             <li>Managed warehouse operations during university breaks, processing 1000+ daily orders.</li>
-                            <li>Took on a leadership role coordinating other employees and maintaining smooth workflows.</li>
+                            <li>Took on a leadership role coordinating colleagues and keeping workflows running smoothly under pressure.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">July 2018 – December 2023</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-
-        <!-- Research -->
-        <section class="resume-section fade-in" id="research">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Research</h2>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">The Adaptive Elastic Horseshoe Prior</h3>
-                        <div class="subheading mb-2">First-author paper with Prof. Michael Tipping &middot; University of Bath</div>
-                        <p><strong>The problem.</strong> Shrinkage priors in Bayesian regression fix their regularisation geometry in advance: the horseshoe handles sparse signals well but struggles when predictors are correlated, while elastic-net approaches fix the balance between sparsity and grouping by hand. Neither adapts to data that contains both structures at once.</p>
-                        <p><strong>The approach.</strong> I developed a prior that learns that balance from the data itself, updating its mixing and strength parameters during inference via momentum-driven empirical Bayes. I showed these updates correspond to approximate M-steps of an EM algorithm on a variational lower bound, and established minimax-optimal posterior contraction in the sparse normal-means setting. Eight simulation studies map out precisely when the method helps and when it does not, alongside a real-data application.</p>
-                        <p><strong>Where it goes next.</strong> The main open problem is extending the contraction theory to correlated designs — precisely the setting that motivates the method. I am also interested in heteroscedastic likelihood specifications to address the calibration limitations the experiments surfaced.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025 – Present</span></div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Benchmarking Deep Learning for Engineering Drawing Layout Detection</h3>
-                        <div class="subheading mb-2">Peer-reviewed, EC3 2026 &middot; contribution: vision-language model methodology &amp; evaluation</div>
-                        <p><strong>The problem.</strong> Document layout models are overwhelmingly trained and validated on text-centric documents. Whether they transfer to engineering drawings — sparse, line-based, extreme aspect ratios — had never been systematically tested.</p>
-                        <p><strong>The approach.</strong> Working with domain experts, the team curated a purpose-built annotated dataset and benchmarked five architectures under matched conditions. I delivered the vision-language arm, fine-tuning a multimodal model with parameter-efficient adaptation, and designed the held-out evaluation protocol used across the comparison.</p>
-                        <p><strong>What we found.</strong> The multimodal model transferred poorly, and an ablation showed that architectures and weights pretrained on general-document layouts actively underperformed models without that prior — a domain-interference effect. The negative result is the interesting one: representations learned on one distribution can harm transfer to a structurally different one, which bears directly on what evaluation in one setting can tell us about behaviour in another.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Hierarchical Bayesian Models for Building Energy Use</h3>
-                        <div class="subheading mb-2">MSc research project &middot; 81%</div>
-                        <p>An investigation of hierarchical Bayesian models for energy-use-intensity prediction, focused on how uncertainty quantification supports transparent carbon assessment where point estimates fall short. I explored the integration of domain-informed priors with flexible likelihoods, and used posterior predictive checks to interrogate model robustness and reflect real-world building heterogeneity.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Reinforcement Learning with PPO</h3>
-                        <div class="subheading mb-2">Academic coursework &middot; collaborative project</div>
-                        <p>Trained a PPO agent in the Boxing-v5 environment, designing a custom CNN feature extractor with orthogonal weight initialisation and investigating how reward shaping affects long-term strategy. A useful counterweight to my Bayesian work in thinking about sequential decision-making under uncertainty.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
                 </div>
             </div>
         </section>
@@ -399,21 +387,7 @@
         <section class="resume-section fade-in" id="skills">
             <div class="resume-section-content">
                 <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Statistical Machine Learning</div>
-                <div>
-                    <span class="badge-skill">Bayesian inference</span>
-                    <span class="badge-skill">Hamiltonian Monte Carlo</span>
-                    <span class="badge-skill">Variational inference</span>
-                    <span class="badge-skill">Empirical Bayes</span>
-                    <span class="badge-skill">Shrinkage priors</span>
-                    <span class="badge-skill">Gaussian processes</span>
-                    <span class="badge-skill">Hierarchical models</span>
-                    <span class="badge-skill">Uncertainty quantification</span>
-                    <span class="badge-skill">LLM/VLM fine-tuning (LoRA)</span>
-                    <span class="badge-skill">Representation learning</span>
-                    <span class="badge-skill">Experimental design</span>
-                </div>
-                <div class="subheading mb-3 mt-3">Programming Languages & Tools</div>
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
                 <div>
                     <span class="badge-skill">Python</span>
                     <span class="badge-skill">PyTorch</span>
@@ -429,6 +403,14 @@
                     <span class="badge-skill">Azure ML</span>
                     <span class="badge-skill">LaTeX</span>
                 </div>
+                <div class="subheading mb-3 mt-3">Collaboration &amp; Communication</div>
+                <div>
+                    <span class="badge-skill">Cross-disciplinary teamwork (engineers &amp; domain experts)</span>
+                    <span class="badge-skill">Co-authored research &amp; peer review</span>
+                    <span class="badge-skill">Mentoring &amp; technical teaching</span>
+                    <span class="badge-skill">Stakeholder-facing evaluation design</span>
+                    <span class="badge-skill">Team sport (competitive football)</span>
+                </div>
             </div>
         </section>
         <hr class="m-0" />
@@ -436,8 +418,8 @@
         <section class="resume-section" id="interests">
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
-                <p>I have played football competitively for most of my life, including in China, across Europe and in Africa. Team sport is the thing outside work that has taught me most about collaboration — showing up consistently, adapting to the people around you, and understanding that a group performs better than the sum of its individuals. I look for that same dynamic in research environments.</p>
-                <p>I also taught mathematics and statistics to GCSE and A-Level students for six years alongside my studies, which sharpened how I explain technical ideas to people approaching them for the first time — a skill that has carried directly into research writing and cross-disciplinary work with domain experts.</p>
+                <p>I have played football competitively for most of my life, including in China, across Europe and in Africa. Team sport is the thing outside work that has taught me most about collaboration — showing up consistently, adapting to the people around you, and understanding that a group performs better than the sum of its individuals. That is the dynamic I look for in a research cohort: people who push each other&rsquo;s ideas rather than working in isolation.</p>
+                <p>I also taught mathematics and statistics to GCSE and A-Level students for six years alongside my studies, which sharpened how I explain technical ideas to people approaching them for the first time — a skill that has carried directly into research writing and cross-disciplinary work with domain experts on projects like the EC3 benchmarking paper.</p>
                 <p class="mb-0">Beyond that: running and the gym, travel, and a lifelong interest in Formula 1 for the intersection of engineering, performance and strategic decision-making under uncertainty.</p>
             </div>
         </section>
