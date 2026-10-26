@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="George Paul - statistician and machine learning researcher working on Bayesian methodology, uncertainty quantification and the evaluation of modern AI systems." />
-    <meta name="author" content="" />
+    <meta name="author" content="George Paul" />
     <meta name="keywords" content="George Paul, Bayesian statistics, machine learning research, shrinkage priors, uncertainty quantification, LLM evaluation, PhD" />
     <meta name="robots" content="index, follow" />
     <title>George Paul - Statistics &amp; Machine Learning Research</title>
@@ -310,7 +310,7 @@
     <button class="dark-toggle" id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode">Dark</button>
     <section class="hero-section fade-in">
         <h1>George Paul</h1>
-        <p class="lead">Bayesian statistics &amp; machine learning research · MSc Data Science (Distinction), University of Bath</p>
+        <p class="lead">Bayesian statistics &amp; machine learning research · Data Science Associate at IBM · MSc Data Science (Distinction), University of Bath</p>
         <div class="social-icons">
             <a class="social-icon" href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
@@ -350,7 +350,7 @@
                     <a href="mailto:georgepaul.data@gmail.com">georgepaul.data@gmail.com</a>
                 </div>
                 <p class="lead mb-5">
-                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry fine-tuning and rigorously evaluating vision-language and language models — work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am currently a Data Science Analyst at Buro Happold, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
+                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry fine-tuning and rigorously evaluating vision-language and language models — work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am now a Data Science Associate in IBM's AI and Analytics team, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
                 </p>
             </div>
         </section>
@@ -364,11 +364,12 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">The Adaptive Elastic Horseshoe Prior</h3>
-                        <div class="subheading mb-2">University of Bath &middot; First author, with Prof. Michael Tipping. Manuscript prepared for submission to the <em>Electronic Journal of Statistics</em>.</div>
+                        <div class="subheading mb-2">University of Bath &middot; First author, with Prof. Michael Tipping. Submitted to <em>Communications in Statistics</em>.</div>
                         <p><strong>The problem.</strong> Shrinkage priors fix their regularisation geometry in advance, so none adapts when sparse and correlated structure appear in the same data. Building energy data, where I first met the problem, is exactly that: a few strong drivers alongside many weak, collinear ones.</p>
-                        <p><strong>The approach.</strong> A prior that learns the sparsity/grouping balance from the data during inference. I showed the adaptive updates are approximate M-steps of an EM algorithm on a variational lower bound, so the procedure is principled rather than heuristic, and established minimax-optimal posterior contraction in the sparse normal-means setting, matching the horseshoe rate.</p>
-                        <p><strong>Evaluation.</strong> Applied within an ARD framework to energy-use-intensity prediction with full uncertainty decomposition, then generalised post-degree across eight simulation studies and a standard benchmark dataset. Convergence failures and calibration limits reported rather than omitted.</p>
-                        <p><strong>Where it goes next.</strong> Extending the contraction theory to correlated designs — the setting that motivates the method — and improving predictive calibration in dense high-dimensional designs.</p>
+                        <p><strong>The approach.</strong> A single prior that learns the balance between sparse and grouped shrinkage from the data by empirical Bayes, then gives the exact closed-form posterior over the coefficients. Features expected to be sparse can be routed through a separate Automatic Relevance Determination block. I showed that the procedure fitting the prior is well-defined and converges locally at the point it reaches in practice, and checked this against observed runs.</p>
+                        <p><strong>Reliability.</strong> I diagnosed a non-convergence in an earlier version of the fitting procedure: a period-2 oscillation that R&#770; could not detect, because all chains started from the same unconverged point. Correcting it reversed the real-data result.</p>
+                        <p><strong>Findings.</strong> Across eight simulation studies and a standard benchmark dataset, the prior adapts to correlation as intended and reduces error relative to the horseshoe when features form strongly correlated groups. Assigning a separate sparse prior to irrelevant features cuts false positives roughly threefold. It does not help on purely sparse designs or when the number of features approaches the sample size, and its uncertainty is conditional on plug-in hyperparameters; the paper reports all three.</p>
+                        <p><strong>Where it goes next.</strong> The adaptive updates are not yet derived from a single objective, and posterior contraction is open. I am working on both in a follow-up theoretical note (in preparation).</p>
                         <p>Began as my MSc dissertation (81%); developed further independently alongside full-time employment.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">Feb 2025 – Present</span></div>
@@ -380,8 +381,9 @@
                         <div class="subheading mb-2">[Co-authors incl. <strong>Paul, G.</strong>] (2026) &middot; peer-reviewed, <em>Proceedings of EC3</em>, Corfu</div>
                         <p class="mb-2">DOI: <a href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">10.35490/EC3.2026.305</a></p>
                         <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings — sparse, line-based, and structurally unlike office paperwork — had not been systematically tested, despite clear practical need in the built-environment sector.</p>
-                        <p><strong>The approach.</strong> We curated a purpose-built annotated dataset and compared several architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and designed the held-out evaluation protocol used across the comparison.</p>
+                        <p><strong>The approach.</strong> Working with facade engineers to agree what should be labelled, we built an annotated dataset of real drawings and compared five architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and designed the held-out evaluation protocol used across the comparison.</p>
                         <p><strong>Findings.</strong> The vision-language model achieved the highest F1 of the five (0.911), with strong semantic classification, but weaker localisation precision than the specialised detectors and a latency that rules it out for real-time use. Separately, an ablation showed models pre-trained on general documents performed worse than equivalent models without that pre-training: prior knowledge from one kind of data can hurt rather than help on a structurally different kind.</p>
+                        <p><strong>Where it goes next.</strong> Testing how far these results transfer beyond a single engineering domain, through zero-shot tests of domain shift and few-shot measurement of how quickly models adapt.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
                 </div>
@@ -406,27 +408,34 @@
                 <h2 class="mb-5">Experience</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
+                        <h3 class="mb-0">Data Science Associate (Machine Learning)</h3>
+                        <div class="subheading mb-3">IBM &middot; London</div>
+                        <ul>
+                            <li>Applying machine learning within IBM's AI and Analytics department.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">October 2026 – Present</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
                         <h3 class="mb-0">Data Science Analyst</h3>
-                        <div class="subheading mb-3">Buro Happold</div>
+                        <div class="subheading mb-3">Buro Happold &middot; London</div>
                         <ul>
                             <li><strong>LLM/VLM fine-tuning &amp; evaluation:</strong> fine-tuned vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) for structured extraction from 1,500+ technical documents, owning the labelling framework and evaluation protocol that fed into our peer-reviewed EC3 2026 paper.</li>
                             <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures.</li>
                             <li><strong>Validation infrastructure:</strong> developed end-to-end model-validation pipelines in Python on Azure, with explicit checks for robustness to distribution shift.</li>
-                            <li>AI Super User for AI tooling across the business, and contributor to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
+                            <li><strong>AI Super User:</strong> guided adoption of AI tooling across the business, running internal sessions and advising colleagues from non-technical disciplines. Also contributed to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
                         </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2025 – Present</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">September 2025 – September 2026</span></div>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Data Science Intern</h3>
-                        <div class="subheading mb-3">GreenPlace</div>
+                        <div class="subheading mb-3">Green Place Assets &middot; Remote</div>
                         <ul>
-                            <li>Contributed to emissions estimation using Bayesian techniques and data traceability pipelines.</li>
-                            <li>Developed the GreenPlace Index (GPI) to quantify building energy performance, now used in internal monitoring.</li>
-                            <li>Built predictive models with geospatial data to assess carbon risk in offices.</li>
-                            <li>Engineered features from a 150k+ row dataset to improve Energy Use Intensity model accuracy.</li>
-                            <li>Created simulations comparing system dynamics and agent-based models of carbon feedback loops.</li>
+                            <li>Designed a building-performance index combining time-series volatility, peer benchmarking and multivariate scoring.</li>
+                            <li>Built gradient-boosting and random-forest models on tabular and geospatial data (out-of-sample R&sup2; = 0.81), validated by cross-validation.</li>
                         </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">June 2024 – July 2025</span></div>
@@ -480,16 +489,26 @@
                         <h3 class="mb-0">University of Bath</h3>
                         <div class="subheading mb-3">Master of Science, Data Science</div>
                         <p>Distinction &mdash; overall 80.7%<br/><span class="subheading" style="font-size:0.9em;">Statistics 94% &middot; Machine Learning 91% &middot; Bayesian Machine Learning 88% &middot; Research 81%</span></p>
+                        <p>Statistical inference, probabilistic modelling, time-series analysis, deep learning and reinforcement learning. Dissertation supervised by Prof. Michael Tipping.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2024 – August 2025</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">September 2024 – January 2026</span></div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">University of Manchester</h3>
                         <div class="subheading mb-3">Bachelor of Science, Mathematics</div>
                         <p>Upper Second Class Honours (2:1)</p>
+                        <p>Probability theory, graph theory, mathematical statistics, stochastic processes, numerical methods, linear algebra; scientific computing in Python and MATLAB.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">September 2021 – June 2024</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Beechen Cliff School</h3>
+                        <div class="subheading mb-3">A-Levels &middot; Bath</div>
+                        <p>Further Mathematics A*, Mathematics A*, Physics A*, Chemistry A</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2019 – 2021</span></div>
                 </div>
             </div>
         </section>
@@ -509,6 +528,7 @@
                     <span class="badge-skill">scikit-learn</span>
                     <span class="badge-skill">statsmodels</span>
                     <span class="badge-skill">Hugging Face</span>
+                    <span class="badge-skill">REST/model API integration</span>
                     <span class="badge-skill">SQL</span>
                     <span class="badge-skill">MATLAB</span>
                     <span class="badge-skill">Git/GitHub</span>
