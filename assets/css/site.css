@@ -354,6 +354,29 @@ h4 {
     overflow-wrap: anywhere;
 }
 
+/* Module lists on the Academic page: name on the left, grade on the right */
+
+.entry .modules {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    max-width: 480px;
+}
+
+.modules li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.modules li span:last-child:not(:first-child) {
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--muted);
+}
+
 /* Home */
 
 .hero {
