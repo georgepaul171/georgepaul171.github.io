@@ -36,11 +36,28 @@
             <ul class="chips">
                 <li>Bayesian shrinkage priors</li>
                 <li>Empirical Bayes</li>
+                <li>Sparse regression</li>
+                <li>Bayesian inference and MCMC</li>
                 <li>Uncertainty quantification</li>
+                <li>Machine learning</li>
                 <li>Model evaluation</li>
-                <li>Vision-language models</li>
+                <li>Vision-language and language models</li>
             </ul>
         </section>
+
+        <h2>Research interests</h2>
+
+        <h3>Bayesian shrinkage priors</h3>
+        <p>How priors such as the horseshoe and its relatives separate signal from noise in high-dimensional regression, and how their behaviour changes when features are correlated. My main work here is a prior that adapts its regularisation geometry to the structure of the data rather than fixing it in advance.</p>
+
+        <h3>Empirical Bayes</h3>
+        <p>Learning hyperparameters from the data through the marginal likelihood, as in Automatic Relevance Determination. I'm interested in when these procedures are well-defined, when they converge, and what guarantees can be given for the estimators they produce.</p>
+
+        <h3>Bayesian inference and computation</h3>
+        <p>Hamiltonian Monte Carlo and closed-form posteriors, and the diagnostics used to trust them. My work on the AEH prior made me especially interested in failure modes that standard convergence checks can miss.</p>
+
+        <h3>Machine learning and model evaluation</h3>
+        <p>More broadly, I work across machine learning: fine-tuning and evaluating vision-language and language models, deep learning, and reinforcement learning. A common thread is careful evaluation: designing protocols and ablations that show how a model will actually behave, rather than how it scores on a small held-out set.</p>
 
         <h2>Papers</h2>
 
@@ -56,15 +73,32 @@
             <p><strong>Findings.</strong> Across eight simulation studies and a standard benchmark dataset, the prior adapts to correlation as intended and reduces error relative to the horseshoe when features form strongly correlated groups. Assigning a separate sparse prior to irrelevant features cuts false positives roughly threefold. It does not help on purely sparse designs or when the number of features approaches the sample size, and its uncertainty is conditional on plug-in hyperparameters; the paper reports all three.</p>
             <p><strong>Where it goes next.</strong> The adaptive updates are not yet derived from a single objective, and posterior contraction is open. I am working on both in a follow-up theoretical note (in preparation).</p>
             <p class="muted">Began as my MSc dissertation (81%); developed further independently alongside full-time employment.</p>
+
+            <h4>Cite this paper</h4>
+            <p class="cite">Paul, G. and Tipping, M. E. (2026). The Adaptive Elastic Horseshoe Prior: Data-Driven Regularisation for Mixed Sparse-Dense Feature Structures via Empirical Bayes. Manuscript submitted to <em>Communications in Statistics</em>.</p>
+
+            <h4>Key references</h4>
+            <ol class="refs">
+                <li>Carvalho, C. M., Polson, N. G. and Scott, J. G. (2010). The horseshoe estimator for sparse signals. <em>Biometrika</em>, 97(2), 465&ndash;480. <a href="https://doi.org/10.1093/biomet/asq017" target="_blank" rel="noopener noreferrer">doi:10.1093/biomet/asq017</a></li>
+                <li>Piironen, J. and Vehtari, A. (2017). Sparsity information and regularization in the horseshoe and other shrinkage priors. <em>Electronic Journal of Statistics</em>, 11(2), 5018&ndash;5051. <a href="https://doi.org/10.1214/17-EJS1337SI" target="_blank" rel="noopener noreferrer">doi:10.1214/17-EJS1337SI</a></li>
+                <li>Polson, N. G. and Scott, J. G. (2011). Shrink globally, act locally: sparse Bayesian regularization and prediction. In <em>Bayesian Statistics 9</em>, 501&ndash;538. Oxford University Press.</li>
+                <li>Zou, H. and Hastie, T. (2005). Regularization and variable selection via the elastic net. <em>Journal of the Royal Statistical Society: Series B</em>, 67(2), 301&ndash;320. <a href="https://doi.org/10.1111/j.1467-9868.2005.00503.x" target="_blank" rel="noopener noreferrer">doi:10.1111/j.1467-9868.2005.00503.x</a></li>
+                <li>Li, Q. and Lin, N. (2010). The Bayesian elastic net. <em>Bayesian Analysis</em>, 5(1), 151&ndash;170. <a href="https://doi.org/10.1214/10-BA506" target="_blank" rel="noopener noreferrer">doi:10.1214/10-BA506</a></li>
+                <li>Bhattacharya, A., Pati, D., Pillai, N. S. and Dunson, D. B. (2015). Dirichlet&ndash;Laplace priors for optimal shrinkage. <em>Journal of the American Statistical Association</em>, 110(512), 1479&ndash;1490. <a href="https://doi.org/10.1080/01621459.2014.960967" target="_blank" rel="noopener noreferrer">doi:10.1080/01621459.2014.960967</a></li>
+                <li>van der Pas, S. L., Kleijn, B. J. K. and van der Vaart, A. W. (2014). The horseshoe estimator: posterior concentration around nearly black vectors. <em>Electronic Journal of Statistics</em>, 8(2), 2585&ndash;2618. <a href="https://doi.org/10.1214/14-EJS962" target="_blank" rel="noopener noreferrer">doi:10.1214/14-EJS962</a></li>
+                <li>MacKay, D. J. C. (1995). Probable networks and plausible predictions: a review of practical Bayesian methods for supervised neural networks. <em>Network: Computation in Neural Systems</em>, 6(3), 469&ndash;505.</li>
+                <li>Neal, R. M. (1996). <em>Bayesian Learning for Neural Networks</em>. PhD thesis, University of Toronto.</li>
+                <li>Vehtari, A., Gelman, A., Simpson, D., Carpenter, B. and B&uuml;rkner, P.-C. (2021). Rank-normalization, folding, and localization: an improved R&#770; for assessing convergence of MCMC. <em>Bayesian Analysis</em>, 16(2), 667&ndash;718. <a href="https://doi.org/10.1214/20-BA1221" target="_blank" rel="noopener noreferrer">doi:10.1214/20-BA1221</a></li>
+            </ol>
         </article>
 
         <article class="entry" id="ec3">
             <div class="entry-head">
-                <h3>Benchmarking Deep Learning for Engineering Drawing Layout Detection</h3>
+                <h3>Benchmarking Deep Learning Approaches for AEC Engineering Drawing Layout Detection and Information Extraction</h3>
                 <span class="entry-date">2025 – 2026</span>
             </div>
-            <div class="entry-meta">Co-authors incl. <strong>G. Paul</strong> &middot; Peer-reviewed, <em>Proceedings of EC3 2026</em>, Corfu &middot; Buro Happold</div>
-            <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings &mdash; sparse, line-based, and structurally unlike office paperwork &mdash; had not been systematically tested, despite clear practical need in the built-environment sector.</p>
+            <div class="entry-meta">T. Huang, A. Lombardi, A. Elnagar, A. Zalouk, <strong>G. Paul</strong>, S. Najjarpour, A. Sigurdsson, K. Ismail, M. Ragab and E. Vakaj &middot; Peer-reviewed, <em>Proceedings of EC3 2026</em>, Corfu &middot; Buro Happold and Birmingham City University</div>
+            <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings, which are sparse, line-based and structurally unlike office paperwork, had not been systematically tested, despite clear practical need in the built-environment sector.</p>
             <p><strong>The approach.</strong> Working with facade engineers to agree what should be labelled, we built an annotated dataset of real drawings and compared five architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and designed the held-out evaluation protocol used across the comparison.</p>
             <p><strong>Findings.</strong> The vision-language model achieved the highest F1 of the five (0.911), with strong semantic classification, but weaker localisation precision than the specialised detectors and a latency that rules it out for real-time use. Separately, an ablation showed models pre-trained on general documents performed worse than equivalent models without that pre-training: prior knowledge from one kind of data can hurt rather than help on a structurally different kind.</p>
             <p><strong>Where it goes next.</strong> Testing how far these results transfer beyond a single engineering domain, through zero-shot tests of domain shift and few-shot measurement of how quickly models adapt.</p>
@@ -72,6 +106,9 @@
                 <a class="button secondary" href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">DOI: 10.35490/EC3.2026.305</a>
                 <a class="button secondary" href="https://ec-3.org/publication/ec32026_305/" target="_blank" rel="noopener noreferrer">Paper page</a>
             </div>
+
+            <h4>Cite this paper</h4>
+            <p class="cite">Huang, T., Lombardi, A., Elnagar, A., Zalouk, A., Paul, G., Najjarpour, S., Sigurdsson, A., Ismail, K., Ragab, M. and Vakaj, E. (2026). Benchmarking Deep Learning Approaches for AEC Engineering Drawing Layout Detection and Information Extraction. In <em>Proceedings of the 2026 European Conference on Computing in Construction (EC3)</em>, Corfu. <a href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">doi:10.35490/EC3.2026.305</a></p>
         </article>
 
         <h2>In preparation</h2>
@@ -81,7 +118,7 @@
                 <h3>Theoretical note on the Adaptive Elastic Horseshoe</h3>
                 <span class="entry-date">2026</span>
             </div>
-            <p>Deriving the adaptive updates from a single objective, and studying posterior contraction for the estimator they induce &mdash; the two open questions left by the paper above.</p>
+            <p>Deriving the adaptive updates from a single objective, and studying posterior contraction for the estimator they induce. These are the two open questions left by the paper above.</p>
         </article>
     </main>
 
