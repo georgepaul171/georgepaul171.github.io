@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog · George Paul</title>
+    <meta name="description" content="Monthly updates from George Paul on research, machine learning and work." />
+    <meta name="author" content="George Paul" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="site-name" href="index.html">George Paul</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="academic.html">Academic</a>
+                <a href="blog.html" aria-current="page">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="page-intro">
+            <h1>Blog</h1>
+            <p class="lead">Monthly updates on what I'm working on, reading and thinking about.</p>
+        </section>
+
+        <!--
+            To add a post:
+            1. Copy blog/post-template.html to blog/YYYY-MM-short-title.html and write the post.
+            2. Add a new <li> at the TOP of the list below, linking to it.
+            3. Optionally add a line to the News list on index.html.
+        -->
+        <ul class="post-list">
+            <li>
+                <span class="entry-date">November 2026</span>
+                <h3><a href="blog/2026-11-new-site.html">A new site, a new job, and a paper under review</a></h3>
+                <p>Starting monthly updates, joining IBM, and what comes next for the Adaptive Elastic Horseshoe prior.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 George Paul</span>
+            <span class="footer-links">
+                <a href="mailto:georgepaul.data@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="assets/cv.pdf" download="George_Paul_CV.pdf">CV</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>

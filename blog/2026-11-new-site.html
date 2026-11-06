@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A new site, a new job, and a paper under review · George Paul</title>
+    <meta name="description" content="November 2026 update: starting monthly posts, joining IBM, and the Adaptive Elastic Horseshoe prior under review." />
+    <meta name="author" content="George Paul" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="site-name" href="../index.html">George Paul</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../research.html">Research</a>
+                <a href="../experience.html">Experience</a>
+                <a href="../academic.html">Academic</a>
+                <a href="../blog.html" aria-current="page">Blog</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <article class="post">
+            <span class="entry-date">November 2026</span>
+            <h1>A new site, a new job, and a paper under review</h1>
+
+            <p>This is the first of what I plan to be monthly updates: short notes on what I've been working on, what I've been reading, and anything I've changed my mind about. Writing things down regularly is a good way to notice what actually moved in a month, and it keeps a record I can look back on.</p>
+
+            <h2>Joining IBM</h2>
+            <p>In October I joined IBM as a Data Science Associate in the AI and Analytics team, working on machine learning problems. I'm really excited to get started and get stuck in, and to be working alongside a team that brings together so much experience in applying machine learning to real problems. There's a lot to learn in the first few months, and I'm looking forward to it.</p>
+
+            <h2>The AEH prior and next steps</h2>
+            <p>The Adaptive Elastic Horseshoe prior, my paper with Prof. Michael Tipping, has now been <a href="../research.html#aeh">submitted to <em>Communications in Statistics</em></a>. It started as my MSc dissertation at Bath and I kept developing it alongside full-time work, so seeing it submitted feels like the end of a long first chapter. The idea is a single shrinkage prior that learns, from the data, how to balance sparse and grouped shrinkage, rather than fixing that balance in advance. That matters whenever a few strong signals sit alongside many weak, correlated ones, which is exactly what I first saw in building energy data.</p>
+            <p>The paper is deliberately clear about what it does not yet establish, and that is where the next piece of work comes in. I'm now building a follow-up theoretical note on the method, focused on two open questions. The first is to derive the adaptive updates from a single objective, so that the procedure for fitting the prior rests on one principled criterion rather than a set of separate update rules. The second is posterior contraction: understanding how quickly, and under what conditions, the posterior concentrates around the truth as more data arrives.</p>
+            <p>Answering those would put the method on a much firmer theoretical footing, and I'll share how it's going in next month's update.</p>
+
+            <div class="post-footer">
+                <a href="../blog.html">&larr; All posts</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 George Paul</span>
+            <span class="footer-links">
+                <a href="mailto:georgepaul.data@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="../assets/cv.pdf" download="George_Paul_CV.pdf">CV</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -2,639 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="George Paul - statistician and machine learning researcher working on Bayesian methodology, uncertainty quantification and the evaluation of modern AI systems." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>George Paul</title>
+    <meta name="description" content="George Paul - statistician and machine learning researcher working on Bayesian methodology, uncertainty quantification and the evaluation of modern AI systems. Data Science Associate at IBM." />
     <meta name="author" content="George Paul" />
-    <meta name="keywords" content="George Paul, Bayesian statistics, machine learning research, shrinkage priors, uncertainty quantification, LLM evaluation, PhD" />
+    <meta name="keywords" content="George Paul, Bayesian statistics, machine learning research, shrinkage priors, uncertainty quantification, IBM, PhD" />
     <meta name="robots" content="index, follow" />
-    <title>George Paul - Statistics &amp; Machine Learning Research</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-        :root {
-            --ink: #1c1f24;
-            --accent: #3a4048;
-            --accent-hover: #2a2e34;
-            --muted: #5c6570;
-            --surface: #f3f4f5;
-            --border: #d4d7db;
-            --chip-bg: #e8eaed;
-            --chip-text: #3a4048;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            color: var(--ink);
-            background: #fff;
-        }
-
-        body, h1, h2, h3, h4, h5, h6, p, a {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-        }
-
-        a {
-            color: var(--accent);
-        }
-
-        a:hover {
-            color: var(--ink);
-        }
-
-        .text-primary {
-            color: var(--muted) !important;
-        }
-
-        .navbar-nav .nav-link,
-        .subheading,
-        .resume-section-content h2,
-        h1, h2, h3, h4, h5, h6 {
-            text-transform: none !important;
-        }
-
-        .resume-section-content h2 {
-            color: var(--ink);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 0.6rem;
-        }
-
-        .subheading {
-            color: var(--muted) !important;
-        }
-
-        #sideNav {
-            background-color: var(--ink) !important;
-        }
-
-        #sideNav .nav-link {
-            color: rgba(255, 255, 255, 0.72) !important;
-            letter-spacing: 0.02em;
-        }
-
-        #sideNav .nav-link:hover,
-        #sideNav .nav-link.active {
-            color: #fff !important;
-        }
-
-        .social-icons {
-            margin-bottom: 1.5rem;
-        }
-
-        .social-icon {
-            color: var(--accent);
-            border: 1px solid var(--border);
-            background: #fff;
-        }
-
-        .social-icon:hover {
-            transform: none;
-            transition: color 0.15s, border-color 0.15s, background 0.15s;
-            color: #fff;
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            font-size: 1rem;
-            border: 1px solid var(--border);
-            border-radius: 0.2rem;
-            color: var(--ink);
-        }
-
-        form input:focus, form textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(58, 64, 72, 0.12);
-        }
-
-        form .btn {
-            background-color: var(--accent);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border: none;
-            border-radius: 0.2rem;
-            cursor: pointer;
-            font-weight: 600;
-            box-shadow: none;
-        }
-
-        form .btn:hover, .btn-primary:hover {
-            background-color: var(--accent-hover);
-        }
-
-        #form-message {
-            margin-top: 1rem;
-            display: none;
-            color: var(--muted);
-            font-weight: 500;
-        }
-
-        .hero-section {
-            padding: 6.5rem 0 4.5rem 0;
-            background: linear-gradient(180deg, #eceef0 0%, #f7f8f9 100%);
-            text-align: center;
-            transition: background 0.3s;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero-section img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 2.5rem;
-            border: 2px solid var(--border);
-        }
-
-        .hero-section h1 {
-            margin-bottom: 1.25rem;
-            font-size: 3.25rem;
-            color: var(--ink);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-section .lead {
-            margin-bottom: 2rem;
-            font-size: 1.15rem;
-            color: var(--muted);
-            max-width: 36rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-section .cv-btn {
-            margin-bottom: 3rem;
-        }
-
-        .hero-section .social-icons {
-            margin-bottom: 0;
-        }
-
-        .btn-primary, .cv-btn {
-            background-color: var(--accent);
-            color: #fff;
-            border: none;
-            border-radius: 0.2rem;
-            padding: 0.6rem 1.2rem;
-            font-weight: 600;
-            margin: 0.5rem 0.25rem;
-            transition: background 0.2s;
-            box-shadow: none;
-        }
-
-        .btn-primary:hover, .cv-btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(16px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: none;
-        }
-
-        .dark-mode {
-            background: #141618 !important;
-            color: #d8dbe0 !important;
-        }
-
-        .dark-mode .hero-section {
-            background: linear-gradient(180deg, #1a1d21 0%, #141618 100%) !important;
-            border-bottom-color: #2a2e34;
-        }
-
-        .dark-mode .resume-section-content,
-        .dark-mode .navbar,
-        .dark-mode .container-fluid {
-            background: #141618 !important;
-            color: #d8dbe0 !important;
-        }
-
-        .dark-mode .resume-section-content h2 {
-            border-bottom-color: #2a2e34;
-            color: #f0f1f2;
-        }
-
-        .dark-mode .subheading,
-        .dark-mode .text-primary,
-        .dark-mode .hero-section .lead {
-            color: #9aa3ad !important;
-        }
-
-        .dark-mode a {
-            color: #c5cad1;
-        }
-
-        .dark-mode .btn-primary, .dark-mode .cv-btn {
-            background-color: #4a525c !important;
-            color: #fff !important;
-        }
-
-        .dark-mode .btn-primary:hover, .dark-mode .cv-btn:hover {
-            background-color: #5c6570 !important;
-        }
-
-        .dark-toggle {
-            position: fixed;
-            top: 1.5rem;
-            right: 1.5rem;
-            z-index: 9999;
-            background: #fff;
-            color: var(--accent);
-            border: 1px solid var(--border);
-            border-radius: 0.25rem;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            box-shadow: none;
-        }
-
-        .dark-mode .dark-toggle {
-            background: #1a1d21;
-            color: #d8dbe0;
-            border: 1px solid #3a4048;
-        }
-
-        .badge-skill {
-            display: inline-block;
-            background: var(--chip-bg);
-            color: var(--chip-text);
-            border: 1px solid var(--border);
-            border-radius: 0.2rem;
-            padding: 0.3em 0.75em;
-            margin: 0.2em 0.2em 0.2em 0;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        .dark-mode .badge-skill {
-            background: #1f2328;
-            color: #c5cad1;
-            border-color: #3a4048;
-        }
-
-        .spinner {
-            display: none;
-            width: 24px;
-            height: 24px;
-            border: 3px solid var(--accent);
-            border-top: 3px solid #fff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
 </head>
-<body id="page-top">
-    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode">Dark</button>
-    <section class="hero-section fade-in">
-        <h1>George Paul</h1>
-        <p class="lead">Bayesian statistics &amp; machine learning research · Data Science Associate at IBM · MSc Data Science (Distinction), University of Bath</p>
-        <div class="social-icons">
-            <a class="social-icon" href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="site-name" href="index.html">George Paul</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="research.html">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="academic.html">Academic</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
         </div>
-        <p class="mt-3 mb-0">
-            <a class="cv-btn" href="assets/cv.pdf" download="George_Paul_CV.pdf">Download CV</a>
-        </p>
-    </section>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">George Paul</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/headshot.jpg" alt="George Paul" style="border: 2px solid rgba(255,255,255,0.2);" /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Publications &amp; Research</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-            </ul>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <img class="hero-photo" src="assets/img/headshot.jpg" alt="George Paul" />
+            <div>
+                <h1>George Paul</h1>
+                <p class="lead">Bayesian statistics and machine learning research. Data Science Associate in IBM's AI and Analytics team, London.</p>
+            </div>
+        </section>
+
+        <p>My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry fine-tuning and rigorously evaluating vision-language and language models &mdash; work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment.</p>
+        <p>I hold an MSc in Data Science (Distinction) from the University of Bath, where my dissertation was supervised by Prof. Michael Tipping, and a BSc in Mathematics from the University of Manchester.</p>
+
+        <div class="button-row">
+            <a class="button" href="assets/cv.pdf" download="George_Paul_CV.pdf">Download CV</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="button secondary" href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="button secondary" href="mailto:georgepaul.data@gmail.com">Email</a>
         </div>
-    </nav>
 
-    <!-- Page Content -->
-    <div class="container-fluid p-0">
-        <!-- About -->
-        <section class="resume-section fade-in" id="about">
-            <div class="resume-section-content">
-                <div class="subheading mb-4">
-                    London, United Kingdom · (+44) 7841 402737 · 
-                    <a href="mailto:georgepaul.data@gmail.com">georgepaul.data@gmail.com</a>
-                </div>
-                <p class="lead mb-5">
-                My research path runs from an MSc dissertation that grew into a first-author methodological paper on Bayesian shrinkage priors, through an applied research role in industry fine-tuning and rigorously evaluating vision-language and language models — work that became a peer-reviewed EC3 2026 paper. That transition gave me hands-on experience of the gap between how models are evaluated on small held-out sets and how they behave in deployment. I am now a Data Science Associate in IBM's AI and Analytics team, and I hold an MSc in Data Science (Distinction) from the University of Bath and a BSc in Mathematics from the University of Manchester.
-                </p>
-            </div>
-        </section>
-        <hr class="m-0" />
+        <h2>News</h2>
+        <ul class="news">
+            <li><span class="entry-date">Nov 2026</span><span>Started this blog, with monthly updates on research and work. <a href="blog/2026-11-new-site.html">Read the first post</a>.</span></li>
+            <li><span class="entry-date">Oct 2026</span><span>Joined IBM's AI and Analytics team as a Data Science Associate (Machine Learning).</span></li>
+            <li><span class="entry-date">2026</span><span><a href="research.html#aeh">The Adaptive Elastic Horseshoe Prior</a>, with Prof. Michael Tipping, submitted to <em>Communications in Statistics</em>.</span></li>
+            <li><span class="entry-date">2026</span><span><a href="research.html#ec3">Benchmarking Deep Learning for Engineering Drawing Layout Detection</a> published in the <em>Proceedings of EC3 2026</em>.</span></li>
+            <li><span class="entry-date">Jan 2026</span><span>Completed the MSc in Data Science at the University of Bath with Distinction.</span></li>
+        </ul>
 
-        <!-- Publications & Research Experience -->
-        <section class="resume-section fade-in" id="research">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Publications and Research Experience</h2>
+        <h2>Explore</h2>
+        <div class="card-grid">
+            <a class="card" href="research.html">
+                <h3>Research</h3>
+                <p>Bayesian shrinkage priors, and benchmarking vision-language models on engineering drawings.</p>
+            </a>
+            <a class="card" href="experience.html">
+                <h3>Experience</h3>
+                <p>IBM, Buro Happold, Green Place Assets and earlier roles, plus skills.</p>
+            </a>
+            <a class="card" href="academic.html">
+                <h3>Academic</h3>
+                <p>Bath, Manchester and A-Levels, with grades, modules and coursework projects.</p>
+            </a>
+            <a class="card" href="blog.html">
+                <h3>Blog</h3>
+                <p>Monthly updates on what I'm working on and thinking about.</p>
+            </a>
+        </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">The Adaptive Elastic Horseshoe Prior</h3>
-                        <div class="subheading mb-2">University of Bath &middot; First author, with Prof. Michael Tipping. Submitted to <em>Communications in Statistics</em>.</div>
-                        <p><strong>The problem.</strong> Shrinkage priors fix their regularisation geometry in advance, so none adapts when sparse and correlated structure appear in the same data. Building energy data, where I first met the problem, is exactly that: a few strong drivers alongside many weak, collinear ones.</p>
-                        <p><strong>The approach.</strong> A single prior that learns the balance between sparse and grouped shrinkage from the data by empirical Bayes, then gives the exact closed-form posterior over the coefficients. Features expected to be sparse can be routed through a separate Automatic Relevance Determination block. I showed that the procedure fitting the prior is well-defined and converges locally at the point it reaches in practice, and checked this against observed runs.</p>
-                        <p><strong>Reliability.</strong> I diagnosed a non-convergence in an earlier version of the fitting procedure: a period-2 oscillation that R&#770; could not detect, because all chains started from the same unconverged point. Correcting it reversed the real-data result.</p>
-                        <p><strong>Findings.</strong> Across eight simulation studies and a standard benchmark dataset, the prior adapts to correlation as intended and reduces error relative to the horseshoe when features form strongly correlated groups. Assigning a separate sparse prior to irrelevant features cuts false positives roughly threefold. It does not help on purely sparse designs or when the number of features approaches the sample size, and its uncertainty is conditional on plug-in hyperparameters; the paper reports all three.</p>
-                        <p><strong>Where it goes next.</strong> The adaptive updates are not yet derived from a single objective, and posterior contraction is open. I am working on both in a follow-up theoretical note (in preparation).</p>
-                        <p>Began as my MSc dissertation (81%); developed further independently alongside full-time employment.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Feb 2025 – Present</span></div>
-                </div>
+        <h2>Outside work</h2>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0"><a href="https://ec-3.org/publication/ec32026_305/" target="_blank" rel="noopener noreferrer">Benchmarking Deep Learning for Engineering Drawing Layout Detection</a></h3>
-                        <div class="subheading mb-2">[Co-authors incl. <strong>Paul, G.</strong>] (2026) &middot; peer-reviewed, <em>Proceedings of EC3</em>, Corfu</div>
-                        <p class="mb-2">DOI: <a href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">10.35490/EC3.2026.305</a></p>
-                        <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings — sparse, line-based, and structurally unlike office paperwork — had not been systematically tested, despite clear practical need in the built-environment sector.</p>
-                        <p><strong>The approach.</strong> Working with facade engineers to agree what should be labelled, we built an annotated dataset of real drawings and compared five architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and designed the held-out evaluation protocol used across the comparison.</p>
-                        <p><strong>Findings.</strong> The vision-language model achieved the highest F1 of the five (0.911), with strong semantic classification, but weaker localisation precision than the specialised detectors and a latency that rules it out for real-time use. Separately, an ablation showed models pre-trained on general documents performed worse than equivalent models without that pre-training: prior knowledge from one kind of data can hurt rather than help on a structurally different kind.</p>
-                        <p><strong>Where it goes next.</strong> Testing how far these results transfer beyond a single engineering domain, through zero-shot tests of domain shift and few-shot measurement of how quickly models adapt.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025 – 2026</span></div>
-                </div>
+        <h3>Research</h3>
+        <p>Research is not something I leave at the office. I genuinely enjoy it, and much of my most rewarding work has happened in my own time. The Adaptive Elastic Horseshoe began as my MSc dissertation, and I carried it through to a submitted paper in the evenings and at weekends alongside a full-time job. I'm now doing the same with a follow-up theoretical note on the method.</p>
+        <p>What draws me in is the combination of rigorous mathematics and practical consequence: a question about how a prior behaves can decide whether a model is trusted in the real world. I spend a good part of my free time reading papers in Bayesian statistics and machine learning, working through derivations, and testing ideas in code to see whether they hold up. I'm always happy to talk with others working on related problems, so please <a href="contact.html">get in touch</a>.</p>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Reinforcement Learning with PPO</h3>
-                        <div class="subheading mb-2">Academic coursework &middot; team project</div>
-                        <p><strong>The problem.</strong> Teaching an agent effective long-horizon behaviour from sparse rewards is hard: small design choices in representation and reward shape strategy in ways that are easy to get wrong.</p>
-                        <p><strong>The approach.</strong> We trained a PPO agent in a boxing environment. I focused on the feature extractor and on how reward shaping changed long-term play — a useful counterweight to my Bayesian work in thinking about sequential decisions under uncertainty.</p>
-                        <p><strong>Where it goes next.</strong> The project reinforced how much evaluation and ablation matter when comparing algorithmic choices, a theme that carries into my applied evaluation work.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2025</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
+        <h3>Football</h3>
+        <p>I have played football competitively for most of my life, in China, across Europe and in Africa. Playing in so many different places has shown me how differently the same game can be understood, and it has taught me a lot about teamwork. The best sides I've played in were the ones where cooperation mattered more than individual ability. It is still the main thing that gets me out of my own head.</p>
 
-        <!-- Experience -->
-        <section class="resume-section fade-in" id="experience">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Data Science Associate (Machine Learning)</h3>
-                        <div class="subheading mb-3">IBM &middot; London</div>
-                        <ul>
-                            <li>Applying machine learning within IBM's AI and Analytics department.</li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">October 2026 – Present</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Data Science Analyst</h3>
-                        <div class="subheading mb-3">Buro Happold &middot; London</div>
-                        <ul>
-                            <li><strong>LLM/VLM fine-tuning &amp; evaluation:</strong> fine-tuned vision-language and language models (PyTorch, LoRA, SWIFT; Azure ML) for structured extraction from 1,500+ technical documents, owning the labelling framework and evaluation protocol that fed into our peer-reviewed EC3 2026 paper.</li>
-                            <li><strong>Anomaly &amp; risk detection at scale:</strong> built a geospatial risk-scoring system combining five years of time-series outage data with satellite-derived features, producing failure-risk rankings across 10,000+ assets. Tuned the precision/recall operating point against the asymmetric cost of false positives versus missed failures.</li>
-                            <li><strong>Validation infrastructure:</strong> developed end-to-end model-validation pipelines in Python on Azure, with explicit checks for robustness to distribution shift.</li>
-                            <li><strong>AI Super User:</strong> guided adoption of AI tooling across the business, running internal sessions and advising colleagues from non-technical disciplines. Also contributed to the Riyadh 2030 Expo Smart City and Digital Twin workstreams.</li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2025 – September 2026</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Data Science Intern</h3>
-                        <div class="subheading mb-3">Green Place Assets &middot; Remote</div>
-                        <ul>
-                            <li>Designed a building-performance index combining time-series volatility, peer benchmarking and multivariate scoring.</li>
-                            <li>Built gradient-boosting and random-forest models on tabular and geospatial data (out-of-sample R&sup2; = 0.81), validated by cross-validation.</li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">June 2024 – July 2025</span></div>
-                </div>
+        <h3>Running and the gym</h3>
+        <p>I run regularly and train in the gym. It's the routine that keeps the rest of my week balanced, and long runs are often where problems I've been stuck on finally untangle themselves.</p>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Physics and Sustainability Intern</h3>
-                        <div class="subheading mb-3">Buro Happold</div>
-                        <ul>
-                            <li>Conducted thermal simulations on buildings to model energy usage.</li>
-                            <li>Gained experience in physical modelling and sustainability-focused engineering processes.</li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">June 2019</span></div>
-                </div>
+        <h3>Travel</h3>
+        <p>I love travelling, especially to places with striking natural landscapes and cultural diversity. Seeing how different places live and work has broadened how I think about sustainability and the problems that data can help solve.</p>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Mathematics Tutor</h3>
-                        <div class="subheading mb-3">Self Employed</div>
-                        <ul>
-                            <li>Taught mathematics and statistics to GCSE and A-Level students for six years, adapting explanations to each learner.</li>
-                            <li>Helped students consistently reach A/A* grades through concept simplification and structured guidance.</li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2018 – June 2024</span></div>
-                </div>
+        <h3>Formula 1</h3>
+        <p>I've followed Formula 1 for as long as I can remember. It sits right at the intersection of engineering, performance and strategic decision-making under uncertainty: teams make split-second calls on tyres and pit stops with incomplete information, which is a very real-world version of the problems I enjoy working on.</p>
+    </main>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Warehouse Assistant</h3>
-                        <div class="subheading mb-3">Pong Cheese Ltd</div>
-                        <ul>
-                            <li>Managed warehouse operations during university breaks, processing 1000+ daily orders.</li>
-                            <li>Took on a leadership role coordinating colleagues and keeping workflows running smoothly under pressure.</li>
-                        </ul>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2018 – December 2023</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 George Paul</span>
+            <span class="footer-links">
+                <a href="mailto:georgepaul.data@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="assets/cv.pdf" download="George_Paul_CV.pdf">CV</a>
+            </span>
+        </div>
+    </footer>
 
-        <!-- Education -->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">University of Bath</h3>
-                        <div class="subheading mb-3">Master of Science, Data Science</div>
-                        <p>Distinction &mdash; overall 80.7%<br/><span class="subheading" style="font-size:0.9em;">Statistics 94% &middot; Machine Learning 91% &middot; Bayesian Machine Learning 88% &middot; Research 81%</span></p>
-                        <p>Statistical inference, probabilistic modelling, time-series analysis, deep learning and reinforcement learning. Dissertation supervised by Prof. Michael Tipping.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2024 – January 2026</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">University of Manchester</h3>
-                        <div class="subheading mb-3">Bachelor of Science, Mathematics</div>
-                        <p>Upper Second Class Honours (2:1)</p>
-                        <p>Probability theory, graph theory, mathematical statistics, stochastic processes, numerical methods, linear algebra; scientific computing in Python and MATLAB.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2021 – June 2024</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Beechen Cliff School</h3>
-                        <div class="subheading mb-3">A-Levels &middot; Bath</div>
-                        <p>Further Mathematics A*, Mathematics A*, Physics A*, Chemistry A</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2019 – 2021</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-
-        <!-- Skills -->
-        <section class="resume-section fade-in" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-                <div>
-                    <span class="badge-skill">Python</span>
-                    <span class="badge-skill">PyTorch</span>
-                    <span class="badge-skill">JAX</span>
-                    <span class="badge-skill">NumPy</span>
-                    <span class="badge-skill">SciPy</span>
-                    <span class="badge-skill">scikit-learn</span>
-                    <span class="badge-skill">statsmodels</span>
-                    <span class="badge-skill">Hugging Face</span>
-                    <span class="badge-skill">REST/model API integration</span>
-                    <span class="badge-skill">SQL</span>
-                    <span class="badge-skill">MATLAB</span>
-                    <span class="badge-skill">Git/GitHub</span>
-                    <span class="badge-skill">Azure ML</span>
-                    <span class="badge-skill">LaTeX</span>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Interests -->
-        <section class="resume-section" id="interests">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Interests</h2>
-                <p>I have played football competitively for most of my life, including in China, across Europe and in Africa. Outside work it is still the main thing that gets me out of my own head.</p>
-                <p>I also taught mathematics and statistics to GCSE and A-Level students for six years alongside my studies, which sharpened how I explain technical ideas to people approaching them for the first time.</p>
-                <p class="mb-0">Beyond that: running and the gym, travel, and a lifelong interest in Formula 1 for the intersection of engineering, performance and strategic decision-making under uncertainty.</p>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Contact -->
-        <section class="resume-section fade-in" id="contact">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Contact Me</h2>
-                <form action="https://formspree.io/f/mnndpeoz" method="POST">
-                    <div class="mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                    <div class="spinner" id="formSpinner"></div>
-                </form>
-                <p id="form-message">Message sent. Thank you.</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- Bootstrap core JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS -->
-    <script src="js/scripts.js"></script>
-
-    <script>
-        // Fade-in animation on scroll
-        function revealOnScroll() {
-            const fadeEls = document.querySelectorAll('.fade-in');
-            const windowHeight = window.innerHeight;
-            fadeEls.forEach(el => {
-                const top = el.getBoundingClientRect().top;
-                if (top < windowHeight - 60) {
-                    el.classList.add('visible');
-                }
-            });
-        }
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('DOMContentLoaded', revealOnScroll);
-
-        // Dark mode toggle
-        const darkToggle = document.getElementById('darkToggle');
-        darkToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if(document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                darkToggle.innerText = 'Light';
-            } else {
-                localStorage.setItem('theme', 'light');
-                darkToggle.innerText = 'Dark';
-            }
-        });
-        // Persist dark mode
-        if(localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-            darkToggle.innerText = 'Light';
-        }
-
-        // Contact form with spinner
-        const form = document.querySelector("form");
-        const message = document.getElementById("form-message");
-        const spinner = document.getElementById("formSpinner");
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault(); // Prevent page reload
-          spinner.style.display = 'block';
-          const formData = new FormData(form);
-          try {
-            const response = await fetch("https://formspree.io/f/mnndpeoz", {
-              method: "POST",
-              headers: { 'Accept': 'application/json' },
-              body: formData
-            });
-            spinner.style.display = 'none';
-            if (response.ok) {
-              form.reset();
-              message.style.display = "block";
-              setTimeout(() => {
-                message.style.display = "none";
-              }, 5000);
-            } else {
-              alert("There was an error. Please try again.");
-            }
-          } catch (err) {
-            spinner.style.display = 'none';
-            alert("Submission failed. Please check your connection and try again.");
-          }
-        });
-      </script>
-    
+    <script src="assets/js/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academic · George Paul</title>
+    <meta name="description" content="George Paul's academic background: MSc Data Science (Distinction) at the University of Bath, BSc Mathematics at the University of Manchester, and coursework projects." />
+    <meta name="author" content="George Paul" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="site-name" href="index.html">George Paul</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="academic.html" aria-current="page">Academic</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="page-intro">
+            <h1>Academic</h1>
+            <p class="lead">Mathematics at Manchester, then Data Science at Bath, where my dissertation became a research paper.</p>
+        </section>
+
+        <h2>Education</h2>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>University of Bath</h3>
+                <span class="entry-date">Sep 2024 – Jan 2026</span>
+            </div>
+            <div class="entry-meta">MSc Data Science &middot; Distinction (overall 80.7%)</div>
+            <ul class="chips">
+                <li>Statistics 94%</li>
+                <li>Machine Learning 91%</li>
+                <li>Bayesian Machine Learning 88%</li>
+                <li>Research 81%</li>
+            </ul>
+            <p>Statistical inference, probabilistic modelling, time-series analysis, deep learning and reinforcement learning.</p>
+            <p>Dissertation supervised by Prof. Michael Tipping, which grew into <a href="research.html#aeh">The Adaptive Elastic Horseshoe Prior</a>.</p>
+        </article>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>University of Manchester</h3>
+                <span class="entry-date">Sep 2021 – Jun 2024</span>
+            </div>
+            <div class="entry-meta">BSc Mathematics &middot; Upper Second Class Honours (2:1)</div>
+            <p>Probability theory, graph theory, mathematical statistics, stochastic processes, numerical methods, linear algebra; scientific computing in Python and MATLAB.</p>
+        </article>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Beechen Cliff School, Bath</h3>
+                <span class="entry-date">2019 – 2021</span>
+            </div>
+            <div class="entry-meta">A-Levels</div>
+            <ul class="chips">
+                <li>Further Mathematics A*</li>
+                <li>Mathematics A*</li>
+                <li>Physics A*</li>
+                <li>Chemistry A</li>
+            </ul>
+        </article>
+
+        <h2>Coursework projects</h2>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Reinforcement Learning with PPO</h3>
+                <span class="entry-date">2025</span>
+            </div>
+            <div class="entry-meta">MSc team project &middot; University of Bath</div>
+            <p><strong>The problem.</strong> Teaching an agent effective long-horizon behaviour from sparse rewards is hard: small design choices in representation and reward shape strategy in ways that are easy to get wrong.</p>
+            <p><strong>The approach.</strong> We trained a PPO agent in a boxing environment. I focused on the feature extractor and on how reward shaping changed long-term play &mdash; a useful counterweight to my Bayesian work in thinking about sequential decisions under uncertainty.</p>
+            <p><strong>What I took from it.</strong> The project reinforced how much evaluation and ablation matter when comparing algorithmic choices, a theme that carries into my applied evaluation work.</p>
+            <div class="button-row">
+                <a class="button secondary" href="https://github.com/mrgw21/rl-multiagent-boxing" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 George Paul</span>
+            <span class="footer-links">
+                <a href="mailto:georgepaul.data@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="assets/cv.pdf" download="George_Paul_CV.pdf">CV</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>

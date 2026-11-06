@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact · George Paul</title>
+    <meta name="description" content="Get in touch with George Paul." />
+    <meta name="author" content="George Paul" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="site-name" href="index.html">George Paul</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="academic.html">Academic</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="page-intro">
+            <h1>Contact</h1>
+            <p class="lead">Happy to talk about research, collaborations or anything on this site.</p>
+        </section>
+
+        <p>
+            <strong>Email:</strong> <a href="mailto:georgepaul.data@gmail.com">georgepaul.data@gmail.com</a><br />
+            <strong>Phone:</strong> (+44) 7841 402737<br />
+            <strong>Location:</strong> London, United Kingdom<br />
+            <strong>Elsewhere:</strong> <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+
+        <h2>Send a message</h2>
+        <form id="contact-form" action="https://formspree.io/f/mnndpeoz" method="POST">
+            <div class="form-field">
+                <label for="email">Your email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button class="button" type="submit">Send</button>
+            <p class="form-status" id="form-status" role="status"></p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 George Paul</span>
+            <span class="footer-links">
+                <a href="mailto:georgepaul.data@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="assets/cv.pdf" download="George_Paul_CV.pdf">CV</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>

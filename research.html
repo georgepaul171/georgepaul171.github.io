@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research · George Paul</title>
+    <meta name="description" content="Research by George Paul: the Adaptive Elastic Horseshoe prior for Bayesian regression, and benchmarking deep learning for engineering drawing layout detection (EC3 2026)." />
+    <meta name="author" content="George Paul" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="site-name" href="index.html">George Paul</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="research.html" aria-current="page">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="academic.html">Academic</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="page-intro">
+            <h1>Research</h1>
+            <p class="lead">Bayesian methodology, uncertainty quantification, and the evaluation of modern AI systems.</p>
+            <ul class="chips">
+                <li>Bayesian shrinkage priors</li>
+                <li>Empirical Bayes</li>
+                <li>Uncertainty quantification</li>
+                <li>Model evaluation</li>
+                <li>Vision-language models</li>
+            </ul>
+        </section>
+
+        <h2>Papers</h2>
+
+        <article class="entry" id="aeh">
+            <div class="entry-head">
+                <h3>The Adaptive Elastic Horseshoe Prior</h3>
+                <span class="entry-date">Feb 2025 – Present</span>
+            </div>
+            <div class="entry-meta"><strong>G. Paul</strong> and M. E. Tipping &middot; Submitted to <em>Communications in Statistics</em> &middot; University of Bath</div>
+            <p><strong>The problem.</strong> Shrinkage priors fix their regularisation geometry in advance, so none adapts when sparse and correlated structure appear in the same data. Building energy data, where I first met the problem, is exactly that: a few strong drivers alongside many weak, collinear ones.</p>
+            <p><strong>The approach.</strong> A single prior that learns the balance between sparse and grouped shrinkage from the data by empirical Bayes, then gives the exact closed-form posterior over the coefficients. Features expected to be sparse can be routed through a separate Automatic Relevance Determination block. I showed that the procedure fitting the prior is well-defined and converges locally at the point it reaches in practice, and checked this against observed runs.</p>
+            <p><strong>Reliability.</strong> I diagnosed a non-convergence in an earlier version of the fitting procedure: a period-2 oscillation that R&#770; could not detect, because all chains started from the same unconverged point. Correcting it reversed the real-data result.</p>
+            <p><strong>Findings.</strong> Across eight simulation studies and a standard benchmark dataset, the prior adapts to correlation as intended and reduces error relative to the horseshoe when features form strongly correlated groups. Assigning a separate sparse prior to irrelevant features cuts false positives roughly threefold. It does not help on purely sparse designs or when the number of features approaches the sample size, and its uncertainty is conditional on plug-in hyperparameters; the paper reports all three.</p>
+            <p><strong>Where it goes next.</strong> The adaptive updates are not yet derived from a single objective, and posterior contraction is open. I am working on both in a follow-up theoretical note (in preparation).</p>
+            <p class="muted">Began as my MSc dissertation (81%); developed further independently alongside full-time employment.</p>
+        </article>
+
+        <article class="entry" id="ec3">
+            <div class="entry-head">
+                <h3>Benchmarking Deep Learning for Engineering Drawing Layout Detection</h3>
+                <span class="entry-date">2025 – 2026</span>
+            </div>
+            <div class="entry-meta">Co-authors incl. <strong>G. Paul</strong> &middot; Peer-reviewed, <em>Proceedings of EC3 2026</em>, Corfu &middot; Buro Happold</div>
+            <p><strong>The problem.</strong> Layout-detection models are typically trained and validated on text-heavy documents. Whether those methods transfer to engineering drawings &mdash; sparse, line-based, and structurally unlike office paperwork &mdash; had not been systematically tested, despite clear practical need in the built-environment sector.</p>
+            <p><strong>The approach.</strong> Working with facade engineers to agree what should be labelled, we built an annotated dataset of real drawings and compared five architectures under matched conditions. I led the vision-language arm, fine-tuning Qwen3-VL via parameter-efficient adaptation with a dual-query grounding strategy, and designed the held-out evaluation protocol used across the comparison.</p>
+            <p><strong>Findings.</strong> The vision-language model achieved the highest F1 of the five (0.911), with strong semantic classification, but weaker localisation precision than the specialised detectors and a latency that rules it out for real-time use. Separately, an ablation showed models pre-trained on general documents performed worse than equivalent models without that pre-training: prior knowledge from one kind of data can hurt rather than help on a structurally different kind.</p>
+            <p><strong>Where it goes next.</strong> Testing how far these results transfer beyond a single engineering domain, through zero-shot tests of domain shift and few-shot measurement of how quickly models adapt.</p>
+            <div class="button-row">
+                <a class="button secondary" href="https://doi.org/10.35490/EC3.2026.305" target="_blank" rel="noopener noreferrer">DOI: 10.35490/EC3.2026.305</a>
+                <a class="button secondary" href="https://ec-3.org/publication/ec32026_305/" target="_blank" rel="noopener noreferrer">Paper page</a>
+            </div>
+        </article>
+
+        <h2>In preparation</h2>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Theoretical note on the Adaptive Elastic Horseshoe</h3>
+                <span class="entry-date">2026</span>
+            </div>
+            <p>Deriving the adaptive updates from a single objective, and studying posterior contraction for the estimator they induce &mdash; the two open questions left by the paper above.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 George Paul</span>
+            <span class="footer-links">
+                <a href="mailto:georgepaul.data@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/george-paul-9a08511b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/georgepaul171" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="assets/cv.pdf" download="George_Paul_CV.pdf">CV</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>
